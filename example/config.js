@@ -10,7 +10,7 @@ module.exports = {
 
 'Outside of my role at NVIDIA, I specialize in robotics, embedded systems, real-time operating systems (RTOS), and hardware-software integration. I hold a master’s degree in Robotics from [National Yang Ming Chiao Tung University](https://www.nycu.edu.tw/nycu/en/index), where I conducted research in the [Networked Control Robotics Lab (NCRL)](https://en.ncrl.lab.nycu.edu.tw/) under the supervision of [Dr. Teng-Hu Cheng](https://me.nycu.edu.tw/en/people/teacher/Teng-Hu-Cheng-18641258). My work focused on developing a quadrotor flight control system using nonlinear control and sensor fusion algorithms. This system was later licensed to the [Taiwan Space Agency (TASA)](https://www.tasa.org.tw/en-US) for scientific research purposes.',
 
-'I am also an active contributor to open-source projects and have presented my work at international conferences, including top-tier venues such as the [Embedded Open Source Summit (EOSS)](https://events.linuxfoundation.org/embedded-open-source-summit/). My technical experience includes the design and implementation of unmanned aerial vehicles (UAVs), RTOS platforms, and virtual machines.',
+'I am also an active contributor to open-source projects and have presented my work at international conferences, including top-tier venues such as the [Embedded Open Source Summit (EOSS)](https://events.linuxfoundation.org/embedded-open-source-summit/). My technical experience includes the design and implementation of unmanned aerial vehicles (UAVs), RTOS, and virtual machines.',
   ],
   avatar: 'profile.png',
   professions: [
