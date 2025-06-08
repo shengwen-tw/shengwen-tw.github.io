@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: '/gatsby-theme-academic',
+  pathPrefix: '/',
   siteUrl: 'https://shengwen-tw.github.io',
   title: 'Sheng-Wen',
   description: 'Personal Website of Sheng-Wen (Colin) Cheng',
