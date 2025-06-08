@@ -35,10 +35,10 @@ module.exports = {
     research: 'research',
   },
   social: [
-    /*{
+    {
       url: '/resume.pdf',
       icon: ['ai', 'cv'],
-    },*/ {
+    }, {
       url: 'https://github.com/shengwen-tw',
       icon: ['fab', 'github'],
     }, {
