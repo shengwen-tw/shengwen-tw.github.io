@@ -11,6 +11,7 @@ import 'katex/dist/katex.min.css';
 import { useLocation } from '@gatsbyjs/reach-router';
 import { Link, withPrefix } from 'gatsby';
 import { startsWith } from 'lodash';
+import { useEffect } from 'react';
 import React, { useRef, useState } from 'react';
 import {
   IconButton, Button, Tooltip, Container, Header, Whisper,
@@ -23,10 +24,10 @@ import LoadableSearch from '../../SearchBar/loadable';
 
 import * as style from './header.module.less';
 
+/*
 const ThemeModeSwitch = () => {
   const [themeMode, setThemeMode] = useTheme();
   const nextThemeMode = themeMode === 'light' ? 'dark' : 'light';
-  //const nextThemeMode = themeMode === 'dark' ? 'light' : 'light';
 
   const toggleTheme = () => {
     setThemeMode(nextThemeMode);
@@ -48,6 +49,17 @@ const ThemeModeSwitch = () => {
       />
     </Whisper>
   );
+};
+*/
+
+const ThemeModeSwitch = () => {
+  const [, setThemeMode] = useTheme();
+
+  useEffect(() => {
+    setThemeMode('light');
+  }, [setThemeMode]);
+
+  return null;
 };
 
 const NavButton = (props) => {
@@ -133,9 +145,10 @@ export default () => {
               {/*<NavButton to="/experience/" onClick={toggleMenu} partiallyActive>Experience</NavButton>*/}
               {/*<NavButton to="/research/" onClick={toggleMenu} partiallyActive>Research</NavButton>*/}
               {/*<NavButton to="/posts/" onClick={toggleMenu} partiallyActive>Posts</NavButton>*/}
-              <li className={style.navItem}>
+              {/*<li className={style.navItem}>
                 <ThemeModeSwitch />
-              </li>
+              </li>*/}
+	      <ThemeModeSwitch />
               <li className={style.navItem} style={{ marginLeft: '1rem' }}>
                 <LoadableSearch
                   isSearchBarExpanded={isSearchBarExpanded}
