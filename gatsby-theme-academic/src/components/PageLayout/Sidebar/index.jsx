@@ -25,7 +25,7 @@ const Name = () => {
     <FlexboxGrid>
       <FlexboxGrid.Item as={Col} xs={24}>
         <h2 className="centerAlign">
-          {firstName}
+          <span>{firstName}</span>
           &nbsp;
           <span>{lastName}</span>
         </h2>
