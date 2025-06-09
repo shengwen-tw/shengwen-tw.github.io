@@ -1,8 +1,8 @@
 module.exports = {
   pathPrefix: '/',
   siteUrl: 'https://shengwen-tw.github.io',
-  title: 'Sheng-Wen',
-  description: 'Personal Website of Sheng-Wen (Colin) Cheng',
+  title: 'Sheng-Wen Cheng',
+  description: 'Web page of Sheng-Wen Cheng',
   author: 'Sheng-Wen Cheng',
   authorAlternative: '鄭聖文',
   introduction: [
