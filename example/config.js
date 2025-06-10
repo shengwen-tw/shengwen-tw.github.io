@@ -98,8 +98,8 @@ module.exports = {
       icon: ['fab', 'linux'],
       title: 'Open Source Software',
     }],
-  /*experience: [
-    {
+  experience: [
+    /*{
       title: 'Work',
       position: 'left',
       data: [
@@ -136,26 +136,29 @@ module.exports = {
           location: 'Somewhere',
         },
       ],
-    }, {
-      title: 'Volunteer',
-      position: 'left',
+    },*/ {
+      title: 'Conference Papers',
       data: [
         {
-          date: 'Aug 2019',
-          title: '[fxh](https://github.com/Reapor-Yurnero) home visit third time',
-          location: 'Somewhere',
+	  title: 'S.-W. Cheng and T.-H. Cheng, “Data-Driven Estimation of Quadrotor Motor Efficiency via Residual Minimization,” manuscript in preparation.',
+	  location: '',
+	  date: '',
         }, {
-          date: 'Aug 2018',
-          title: '[fxh](https://github.com/Reapor-Yurnero) home visit second time',
-          location: 'Somewhere',
+          title: 'S.-W. Cheng and Y.-H. Huang, “A Computationally Efficient GNSS/INS Design of Multirotor based on Error-state Kalman Filter,” 2023 62nd Annual Conference of the Society of Instrument and Control Engineers of Japan (SICE), Tsu, Japan, 2023.',
+	  location: '',
+	  date: '',
         }, {
-          date: 'Aug 2017',
-          title: '[fxh](https://github.com/Reapor-Yurnero) home visit\n\n111',
-          location: 'Somewhere',
+          title: 'S.-W. Cheng and H.-A. Hung, “Robust State-Feedback H∞ Control of Quadrotor,” 2022 International Automatic Control Conference (CACS), Kaohsiung, Taiwan, 2022.',
+	  location: '',
+	  date: '',
+        }, {
+          title: 'S.-W. Wang, S.-W. Cheng, and C.-C. Huang, “Puyuma: Linux-based RTOS Experimental Platform for Constructing Self-Driving Miniature Vehicles,” Science and Information Conference (SAI), London, United Kingdom, 2018.',
+	  location: '',
+	  date: '',
         },
       ],
     },
-  ],*/
+  ],
   awards: [
     {
       date: 'Feb 2024 - Present',

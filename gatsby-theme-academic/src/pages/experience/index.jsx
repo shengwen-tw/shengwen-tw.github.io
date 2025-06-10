@@ -8,6 +8,7 @@ import SEO from '../../components/Seo';
 import { useSiteMetadata } from '../../utils/hooks';
 import Utils from '../../utils/pageUtils.mjs';
 
+/*
 const generateListItem = (data) => {
   const title = Utils.parseMarkDown(data.title, true);
   const description = Utils.parseMarkDown(data.description, true);
@@ -15,6 +16,24 @@ const generateListItem = (data) => {
     <Panel style={{ padding: '12.5px 20px' }}>
       <h6 dangerouslySetInnerHTML={{ __html: title }} />
       <div style={{ color: 'var(--rs-text-secondary)' }}>{`${data.date}, ${data.location}`}</div>
+      <div dangerouslySetInnerHTML={{ __html: description }} />
+    </Panel>
+  );
+};*/
+
+const generateListItem = (data) => {
+  const title = Utils.parseMarkDown(data.title, true);
+  const description = Utils.parseMarkDown(data.description, true);
+  const showMeta = data.date && data.location;
+
+  return ( 
+    <Panel style={{ padding: '12.5px 20px' }}>
+      <h6 dangerouslySetInnerHTML={{ __html: title }} />
+      {showMeta && (
+        <div style={{ color: 'var(--rs-text-secondary)' }}>
+          {`${data.date}, ${data.location}`}
+        </div>
+      )}
       <div dangerouslySetInnerHTML={{ __html: description }} />
     </Panel>
   );
@@ -34,7 +53,7 @@ const generateExperience = (data) => (
   </Panel>
 );
 
-const Experience = () => {
+/*const Experience = () => {
   const siteMetadata = useSiteMetadata();
   const leftColumn = _.filter(siteMetadata.experience, (value) => value.position === 'left');
   const rightColumn = _.filter(siteMetadata.experience, (value) => value.position === 'right');
@@ -59,6 +78,31 @@ const Experience = () => {
       </FlexboxGrid>
     </>
   );
+};*/
+
+const Experience = () => {
+  const siteMetadata = useSiteMetadata();
+  const allExperience = siteMetadata.experience;
+
+  return (
+    <>
+      <SEO
+        title="Experience"
+        description="This page consists of various Tags on various technologies that I'll be using
+          to write blogs. You can check the blogs related to the tags by clicking on any of the tags below."
+        path="experience"
+      />
+      <div className="marginTopTitle">
+        <h1 className="titleSeparate">Publications</h1>
+      </div>
+      <FlexboxGrid>
+        <FlexboxGrid.Item as={Col} xs={24} sm={24} md={24}>
+          {allExperience.map(generateExperience)}
+        </FlexboxGrid.Item>
+      </FlexboxGrid>
+    </>
+  );
 };
+
 
 export default Experience;
