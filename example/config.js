@@ -78,7 +78,7 @@ module.exports = {
     }, {
       date: 'Sept 2015 - June 2019',
       icon: 'university',
-      title: 'B.S. in Computer Science and Information Engineering',
+      title: 'B.E. in Computer Science and Information Engineering',
       location: 'Providence University, Taiwan',
     }],
   interests: [
