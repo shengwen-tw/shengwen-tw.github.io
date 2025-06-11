@@ -76,7 +76,7 @@ const SelectedResearch = () => {
   const tagsMap = _.mapValues(_.keyBy(tags, (tag) => tag.node.name), 'node');
   return (data.allMdx && data.allMdx.edges && data.allMdx.edges.length) ? (
     <div className={styles.homepageSection}>
-      <h2 style={{ marginBottom: '1rem' }}>Selected Research</h2>
+      <h2 style={{ marginBottom: '1rem' }}>Selected Research and Projects</h2>
       <FlexboxGrid className="spacing-grid">
         {data.allMdx &&
           data.allMdx.edges.map((val, key) => (
