@@ -198,21 +198,21 @@ function Post({
           {time.join(', ')}
         </div>
         <FlexboxGrid style={{ marginBottom: '1rem' }}>
-          <FlexboxGrid.Item as={Col} xs={24} sm={24} md={image ? 12 : 24} lg={image ? 16 : 24}>
+          {/*<FlexboxGrid.Item as={Col} xs={24} sm={24} md={image ? 12 : 24} lg={image ? 16 : 24}>
             <CodeBox title="Abstract" style={{ height: '100%' }}>
               <p
                 style={{ marginBottom: '0' }}
                 dangerouslySetInnerHTML={{ __html: Utils.parseMarkDown(excerpt, true) }}
               />
             </CodeBox>
-          </FlexboxGrid.Item>
-          {image ? (
+          </FlexboxGrid.Item>*/}
+          {/*{image ? (
             <FlexboxGrid.Item as={Col} xs={24} sm={24} md={12} lg={8}>
               <div style={{ height: '100%' }}>
                 <GatsbyImage image={image} title={title} alt={title} />
               </div>
             </FlexboxGrid.Item>
-          ) : null}
+          ) : null}*/}
         </FlexboxGrid>
         {nonce === '' ? <PublicBody /> : <EncryptedBody />}
 
