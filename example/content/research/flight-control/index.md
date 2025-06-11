@@ -9,7 +9,7 @@ path: "research/flight-control"
 date: 2021-9-1
 selected: true 
 cover: "./quadrotor.png"
-priority: 20
+priority: 1
 ---
 
 ## Overview
@@ -24,7 +24,7 @@ Key contributions:
 
 This work highlights a robust system integration approach for environment-adaptive navigation, allowing UAVs to operate seamlessly across GNSS-available and GNSS-denied settings.
 
-<iframe width="956" height="538" src="https://www.youtube.com/embed/hBBe1Kj82B4" title="Presentation Video for Masters Thesis Defense" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/hBBe1Kj82B4" title="Presentation Video for Masters Thesis Defense" width="100%" height="500px" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Gallery
 
