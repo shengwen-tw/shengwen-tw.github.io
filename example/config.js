@@ -74,12 +74,12 @@ module.exports = {
       title: 'Ph.D. Student in Electrical Engineering',
       location: 'National Taiwan University, Taiwan',
     },*/ {
-      date: 'Sept 2019 - Aug 2021',
+      date: 'Sep 2019 - Nov 2021',
       icon: 'university',
       title: 'M.S. in Robotics',
       location: 'National Yang Ming Chiao Tung University, Taiwan',
     }, {
-      date: 'Sept 2015 - June 2019',
+      date: 'Sep 2015 - June 2019',
       icon: 'university',
       title: 'B.E. in Computer Science and Information Engineering',
       location: 'Providence University, Taiwan',
