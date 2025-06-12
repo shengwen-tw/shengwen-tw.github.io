@@ -63,7 +63,7 @@ const generateExperience = (data) => (
         title="Experience"
         description="This page consists of various Tags on various technologies that I'll be using
           to write blogs. You can check the blogs related to the tags by clicking on any of the tags below."
-        path="experience"
+        path="publications"
       />
       <div className="marginTopTitle">
         <h1 className="titleSeparate">Experience</h1>
@@ -87,10 +87,10 @@ const Experience = () => {
   return (
     <>
       <SEO
-        title="Experience"
+        title="Publications"
         description="This page consists of various Tags on various technologies that I'll be using
           to write blogs. You can check the blogs related to the tags by clicking on any of the tags below."
-        path="experience"
+        path="publications"
       />
       <div className="marginTopTitle">
         <h1 className="titleSeparate">Publications</h1>
