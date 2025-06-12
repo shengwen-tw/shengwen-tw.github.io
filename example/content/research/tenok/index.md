@@ -5,7 +5,7 @@ path: "research/tenok"
 date: 2024-2-1
 selected: true
 cover: "./preview.png"
-priority: 3 
+priority: 4 
 ---
 
 ## Overview
