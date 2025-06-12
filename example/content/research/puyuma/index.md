@@ -1,7 +1,7 @@
 ---
 title: "Puyuma: a miniature vision-based self-driving system with real-time Linux"
 tags: ["self-driving", "computer vision", "RTOS", "Linux"]
-date: 2018-1-1
+date: 2017-9
 path: "research/puyuma"
 cover: "puyuma.png"
 priority: 3

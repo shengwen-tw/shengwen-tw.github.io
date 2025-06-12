@@ -1,7 +1,7 @@
 ---
 title: "PU-01: a twin-boom fixed-wing aircraft"
 tags: ["UAV", "fixed-wing"]
-date: 2016-1-1
+date: 2016-1
 path: "research/pu-01"
 selected: true
 cover: "./pu01.jpg"

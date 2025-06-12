@@ -2,7 +2,7 @@
 title: "Tenok: a Linux-like real-time operating system for robotics and IoT"
 tags: ["RTOS", "embedded system"]
 path: "research/tenok"
-date: 2024-2-1
+date: 2024-2
 selected: true
 cover: "./preview.png"
 priority: 4 

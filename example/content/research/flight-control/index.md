@@ -6,7 +6,7 @@ tags:
   - "sensor fusion"
   - "SLAM"
 path: "research/flight-control"
-date: 2021-9-1
+date: 2021-11
 selected: true 
 cover: "./quadrotor.png"
 priority: 1
