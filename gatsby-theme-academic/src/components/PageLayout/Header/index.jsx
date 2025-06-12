@@ -149,7 +149,7 @@ export default () => {
                 <ThemeModeSwitch />
               </li>*/}
 	      <ThemeModeSwitch />
-              <li className={style.navItem} style={{ marginLeft: '1rem' }}>
+              {/*<li className={style.navItem} style={{ marginLeft: '1rem' }}>
                 <LoadableSearch
                   isSearchBarExpanded={isSearchBarExpanded}
                   handleSearchBarToggle={collapseSearch}
@@ -157,7 +157,7 @@ export default () => {
                 {isSearchBarExpanded
                   ? <Icon icon="times" fixedWidth />
                   : <Icon icon="search" fixedWidth onMouseDown={expandSearch} />}
-              </li>
+              </li>*/}
               {/* <li className={style.navItem}>
               <Link to="/tags" onClick={toggleMenu} activeClassName={style.anchorActive}>
                 Tags
