@@ -142,8 +142,8 @@ export default () => {
           <div className={style.backgroundDiv}>
             <ul className={style.nav}>
               <NavButton to="/" onClick={toggleMenu}>About</NavButton>
+              <NavButton to="/research/" onClick={toggleMenu} partiallyActive>Research</NavButton>
               <NavButton to="/experience/" onClick={toggleMenu} partiallyActive>Publications</NavButton>
-              {/*<NavButton to="/research/" onClick={toggleMenu} partiallyActive>Research</NavButton>*/}
               {/*<NavButton to="/posts/" onClick={toggleMenu} partiallyActive>Posts</NavButton>*/}
               {/*<li className={style.navItem}>
                 <ThemeModeSwitch />
