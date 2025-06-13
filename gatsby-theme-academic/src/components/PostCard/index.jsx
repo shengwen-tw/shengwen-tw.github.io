@@ -53,9 +53,6 @@ const PostCard = (props) => {
         <a href={Utils.generateFullUrl(siteMetadata, url)}>
           {image ? <GatsbyImage image={image} /> : <div className={style.postCardImg} />}
         </a>
-        <span className={style.dateHolder}>
-          {date ? Utils.formatDate(date) : ''}
-        </span>
       </div>
       <div style={{ padding: '0.8rem' }}>
         <h5><a href={Utils.generateFullUrl(siteMetadata, url)}>{title}</a></h5>
