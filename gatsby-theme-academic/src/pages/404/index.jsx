@@ -24,7 +24,6 @@ export const query = graphql`
 export default ({ data }) => (
   <Container className="outerPadding">
     <Container className="container">
-      <Header />
       <Sidebar404>
         <>
           <div className={`${style.sidebar404Img} ${style.boxContent}`}>
