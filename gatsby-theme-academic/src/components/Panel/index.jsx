@@ -66,18 +66,6 @@ const Panel = (props) => {
   return (
     <>
       <FlexboxGrid className="spacing-grid">
-        <FlexboxGrid.Item as={Col} xs={24} sm={24} md={24} lg={24}>
-          <CodeBox title="Filters">
-            <Row gutter={8} align="middle" type="flex">
-              <Col>
-                <div style={{ marginBottom: '0', marginRight: '10px' }}>
-                  Tags:
-                </div>
-              </Col>
-              { tags.map(generateTag)}
-            </Row>
-          </CodeBox>
-        </FlexboxGrid.Item>
         {
           data.allMdx && data.allMdx.edges.map((val, key) => {
             // eslint-disable-next-line no-restricted-syntax
