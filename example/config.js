@@ -103,7 +103,7 @@ module.exports = {
           title: 'International Conferences',
           data: [
             {
-  	      title: 'EOSS 2024: Crafting a Vision-Aided Software Stack for UAV',
+  	      title: 'EOSS 2024: Crafting a Vision-Aided Software Stack for UAV [[Video]](https://www.youtube.com/watch?v=xTfPdS7LA34) [[Slides]](https://drive.google.com/file/d/1aXPNn7SbN5oBkVzIqHo13JiRVv_63CJi/view?usp=sharing)',
   	      location: 'Seattle, Washington, USA',
 	      date: 'Apr 16 2024',
             }
@@ -112,15 +112,15 @@ module.exports = {
         title: 'Domestic Conferences',
         data: [
           {
-            title: 'MOPCON 2024 Keynote Speech: Trends in Machine Learning for Unmanned Aerial Vehicle Applications',
+            title: 'MOPCON 2024 Keynote Speech: Trends in Machine Learning for Unmanned Aerial Vehicle Applications [[Slides]](https://drive.google.com/file/d/1UmSeU8Y63s4cASBFNWM_zi5ll2J9EIJx/view?usp=sharing)',
 	    location: 'Kaohsiung, Taiwan',
 	    date: 'Oct 26 2024',
           }, {
-            title: 'COSCUP 2024: Creating a Linux-like Real-Time Operating System for Quadrotor Drones',
+            title: 'COSCUP 2024: Creating a Linux-like Real-Time Operating System for Quadrotor Drones [[Video]](https://www.youtube.com/watch?v=Ft4jBW732nU) [[Slides]](https://drive.google.com/file/d/16S8ZRC-lhT15CXwWIy-RIIWXl5Ertqo5/view)',
 	    location: 'Taipei, Taiwan',
 	    date: 'Aug 3 2024',
           }, {
-            title: 'COSCUP 2023: Tenok - Build a Real-Time Operating System for Robotics',
+            title: 'COSCUP 2023: Tenok - Build a Real-Time Operating System for Robotics [[Video]](https://www.youtube.com/watch?v=w87l__ShgVw) [[Slides]](https://drive.google.com/file/d/1p8YJVPVwFAEknMXPbXzjj0y0p5qcqT2T/view)',
 	    location: 'Taipei, Taiwan',
 	    date: 'Jul 29 2023',
           },
@@ -145,15 +145,15 @@ module.exports = {
 	  location: '',
 	  date: '',
         }, {
-          title: 'S.-W. Cheng and Y.-H. Huang, “A Computationally Efficient GNSS/INS Design of Multirotor based on Error-state Kalman Filter,” 2023 62nd Annual Conference of the Society of Instrument and Control Engineers of Japan (SICE), Tsu, Japan, 2023.',
+          title: 'S.-W. Cheng and Y.-H. Huang, “A Computationally Efficient GNSS/INS Design of Multirotor based on Error-state Kalman Filter,” 2023 62nd Annual Conference of the Society of Instrument and Control Engineers of Japan (SICE), Tsu, Japan, 2023. [[URL]](https://ieeexplore.ieee.org/abstract/document/10354209)',
 	  location: '',
 	  date: '',
         }, {
-          title: 'S.-W. Cheng and H.-A. Hung, “Robust State-Feedback H∞ Control of Quadrotor,” 2022 International Automatic Control Conference (CACS), Kaohsiung, Taiwan, 2022.',
+          title: 'S.-W. Cheng and H.-A. Hung, “Robust State-Feedback H∞ Control of Quadrotor,” 2022 International Automatic Control Conference (CACS), Kaohsiung, Taiwan, 2022. [[URL]](https://ieeexplore.ieee.org/document/9969787)',
 	  location: '',
 	  date: '',
         }, {
-          title: 'S.-W. Wang, S.-W. Cheng, and C.-C. Huang, “Puyuma: Linux-based RTOS Experimental Platform for Constructing Self-Driving Miniature Vehicles,” Science and Information Conference (SAI), London, United Kingdom, 2018.',
+          title: 'S.-W. Wang, S.-W. Cheng, and C.-C. Huang, “Puyuma: Linux-based RTOS Experimental Platform for Constructing Self-Driving Miniature Vehicles,” Science and Information Conference (SAI), London, United Kingdom, 2018. [[URL]](https://link.springer.com/chapter/10.1007/978-3-030-01174-1_75)',
 	  location: '',
 	  date: '',
         },
