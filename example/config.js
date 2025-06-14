@@ -98,45 +98,46 @@ module.exports = {
       icon: ['fab', 'linux'],
       title: 'Open Source Software',
     }],
-  experience: [
-    /*{
-      title: 'Work',
-      position: 'left',
-      data: [
+    talks: [
         {
-          date: 'Aug 2019 - Present',
-          title: 'Software Engineer',
-          location: 'Somewhere',
-          description: 'description',
-        },
-      ],
-    }, {
-      title: 'Teaching',
-      position: 'right',
-      data: [
-        {
-          date: 'Aug 2019',
-          title: 'Teaching Assistant of XXX',
-          location: 'Somewhere',
+          title: 'International Conferences',
+          data: [
+            {
+  	      title: 'EOSS 2024: Crafting a Vision-Aided Software Stack for UAV',
+  	      location: 'Seattle, Washington, USA',
+	      date: 'Apr 16 2024',
+            }
+          ],
         }, {
-          date: 'Aug 2018',
-          title: 'Teaching Assistant of XXX',
-          location: 'Somewhere',
-        }, {
-          date: 'Aug 2017',
-          title: 'Teaching Assistant of XXX',
-          location: 'Somewhere',
-        }, {
-          date: 'Aug 2018',
-          title: 'Teaching Assistant of XXX',
-          location: 'Somewhere',
-        }, {
-          date: 'Aug 2017',
-          title: 'Teaching Assistant of XXX',
-          location: 'Somewhere',
-        },
-      ],
-    },*/ {
+        title: 'Domestic Conferences',
+        data: [
+          {
+            title: 'MOPCON 2024 Keynote Speech: Trends in Machine Learning for Unmanned Aerial Vehicle Applications',
+	    location: 'Kaohsiung, Taiwan',
+	    date: 'Oct 26 2024',
+          }, {
+            title: 'COSCUP 2024: Creating a Linux-like Real-Time Operating System for Quadrotor Drones',
+	    location: 'Taipei, Taiwan',
+	    date: 'Aug 3 2024',
+          }, {
+            title: 'COSCUP 2023: Tenok - Build a Real-Time Operating System for Robotics',
+	    location: 'Taipei, Taiwan',
+	    date: 'Jul 29 2023',
+          },
+        ],
+      }, {
+        title: 'Invited Talks',
+          data: [
+          {
+            title: 'PEGATRON Corporation: Trends and Lessons Learned in Deep Learning and Generative AI Applications for UAV',
+  	    location: 'Taipei, Taiwan',
+	    date: 'Dec 19 2024',
+          }
+        ],
+      },
+    ],
+    experience: [
+      {
       title: 'Conference Papers',
       data: [
         {

@@ -107,6 +107,26 @@ export const useSiteMetadata = () => {
               description
             }
           }
+          talks {
+            title
+            position
+            data {
+              date
+              title
+              location
+              description
+            }
+          }
+          talks {
+            title
+            position
+            data {
+              date
+              title
+              location
+              description
+            }
+          }
           awards {
             date
             title

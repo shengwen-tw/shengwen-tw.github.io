@@ -342,6 +342,20 @@ const config = ({
           ],
         },
       ],
+      talks: [
+        {
+          title: '',
+          position: 'left',
+          data: [
+            {
+              date: '',
+              title: '',
+              location: '',
+              description: '',
+            },
+          ],
+        },
+      ],
       awards: [
         {
           date: '',

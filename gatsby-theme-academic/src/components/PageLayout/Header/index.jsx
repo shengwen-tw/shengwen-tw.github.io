@@ -144,6 +144,7 @@ export default () => {
               <NavButton to="/" onClick={toggleMenu}>About</NavButton>
               <NavButton to="/research/" onClick={toggleMenu} partiallyActive>Research</NavButton>
               <NavButton to="/publications/" onClick={toggleMenu} partiallyActive>Publications</NavButton>
+              <NavButton to="/talks/" onClick={toggleMenu} partiallyActive>Talks</NavButton>
               <NavButton to="/posts/" onClick={toggleMenu} partiallyActive>Posts</NavButton>
               {/*<li className={style.navItem}>
                 <ThemeModeSwitch />
