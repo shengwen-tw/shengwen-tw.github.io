@@ -6,7 +6,7 @@ module.exports = {
   author: 'Sheng-Wen Cheng',
   authorAlternative: '鄭聖文',
   introduction: [
-'Hi, I’m Sheng-Wen (Colin) Cheng, a system software engineer with the [Platform Security Controller (PSC)](https://docs.nvidia.com/jetson/archives/r34.1/DeveloperGuide/text/AR/BootArchitecture/JetsonAgxOrinBootFlow.html) team at NVIDIA, where I develop secure bootloader software to ensure system integrity during the boot process.',
+'Hi, I’m Sheng-Wen (Colin) Cheng, a system software engineer with the [Platform Security Controller (PSC)](https://docs.nvidia.com/jetson/archives/r34.1/DeveloperGuide/text/AR/BootArchitecture/JetsonAgxOrinBootFlow.html) team at NVIDIA, where I develop secure bootloader software to ensure system integrity during the boot process. Before this role, I was a Ph.D. student in Electrical Engineering at [National Taiwan University](https://www.ntu.edu.tw/english/). I later chose to transition into industry to gain professional experience while remaining involved in academic activities.',
 
 'Outside of my role at NVIDIA, I specialize in robotics, embedded systems, real-time operating systems (RTOS), and hardware-software integration. I hold a master’s degree in Robotics from [National Yang Ming Chiao Tung University](https://www.nycu.edu.tw/nycu/en/index), where I conducted research in the [Networked Control Robotics Lab (NCRL)](https://en.ncrl.lab.nycu.edu.tw/) under the supervision of [Dr. Teng-Hu Cheng](https://me.nycu.edu.tw/en/people/teacher/Teng-Hu-Cheng-18641258). My work focused on developing a quadrotor flight control system using nonlinear control and sensor fusion algorithms. This system was later licensed to the [Taiwan Space Agency (TASA)](https://www.tasa.org.tw/en-US) for scientific research purposes.',
 
@@ -67,13 +67,13 @@ module.exports = {
       date: 'Aug 2025 - Present',
       icon: 'university',
       title: 'M.S. in Computer Science',
-      location: 'The University of Texas at Austin, USA',*/
-    /*}, {
+      location: 'The University of Texas at Austin, USA',
+    },*/ {
       date: 'Sept 2022 - Mar 2024',
       icon: 'university',
-      title: 'Ph.D. Student in Electrical Engineering',
+      title: 'Ph.D. Student in Electrical Engineering (Incomplete)',
       location: 'National Taiwan University, Taiwan',
-    },*/ {
+    }, {
       date: 'Sep 2019 - Nov 2021',
       icon: 'university',
       title: 'M.S. in Robotics',
