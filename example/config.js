@@ -71,7 +71,7 @@ module.exports = {
     },*/ {
       date: 'Sept 2022 - Mar 2024',
       icon: 'university',
-      title: 'Doctoral Studies in Electrical Engineering (Incomplete)',
+      title: 'Ph.D. Student in Electrical Engineering',
       location: 'National Taiwan University, Taiwan',
     }, {
       date: 'Sep 2019 - Nov 2021',
