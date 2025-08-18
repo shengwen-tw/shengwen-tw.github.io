@@ -69,7 +69,7 @@ module.exports = {
       title: 'M.S. in Computer Science',
       location: 'The University of Texas at Austin, USA',
     },*/ {
-      date: 'Sept 2022 - Mar 2024',
+      date: 'Sep 2022 - Mar 2024',
       icon: 'university',
       title: 'Ph.D. Student in Electrical Engineering',
       location: 'National Taiwan University, Taiwan',
@@ -106,6 +106,10 @@ module.exports = {
   	      title: 'EOSS 2024: Crafting a Vision-Aided Software Stack for UAV [[Video]](https://www.youtube.com/watch?v=xTfPdS7LA34) [[Slides]](https://drive.google.com/file/d/1aXPNn7SbN5oBkVzIqHo13JiRVv_63CJi/view?usp=sharing)',
   	      location: 'Seattle, Washington, USA',
 	      date: 'Apr 16 2024',
+            }, {
+  	      title: 'OpenTechConf 2025: Building a Quadrotor Simulator with Python - Modeling, Simulation, and Control',
+  	      location: 'AWS Office in Hong Kong',
+	      date: 'Sep 13 2025',
             }
           ],
         }, {
