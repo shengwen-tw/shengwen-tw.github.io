@@ -141,15 +141,15 @@
   Cache-Control: public, max-age=31536000, immutable
 /static/JetBrainsMono-ThinItalic-92c4c9ee9d3cb2d9ced5bf4311e7f22e.woff2
   Cache-Control: public, max-age=31536000, immutable
-/static/academicons-e8713c3132628422b2e53c99b499c142.eot
+/static/academicons-db80a16a4e1158e3e8752d6f9bc47ca8.eot
   Cache-Control: public, max-age=31536000, immutable
-/static/academicons-4f700bbf66a5f360ce3531ea15ac42ed.ttf
+/static/academicons-bf8f5461e263ef7570df87921158018e.ttf
   Cache-Control: public, max-age=31536000, immutable
-/static/academicons-c8b8bfc0fed1197073165a52e48fdf3c.woff
+/static/academicons-3bffeab99dd184ea1e19739eb9344c82.woff
   Cache-Control: public, max-age=31536000, immutable
-/static/academicons-c2f62710e847070d5e6cb0877d849a4c.svg
+/static/academicons-250e5e0d1e73f65a47f9d1304ec62cfd.svg
   Cache-Control: public, max-age=31536000, immutable
-/styles.f1472b7a2e95a6ba77f8.css
+/styles.06a5b28768dd2f97de6b.css
   Cache-Control: public, max-age=31536000, immutable
 /14e9c903-5b69776f4a690fb0b159.js.LICENSE.txt
   Cache-Control: public, max-age=31536000, immutable
@@ -163,15 +163,15 @@
   Cache-Control: public, max-age=31536000, immutable
 /99908690-3305a1e335fc18cc94da.js.LICENSE.txt
   Cache-Control: public, max-age=31536000, immutable
-/app-90f851ea18256b1c6dc4.js.LICENSE.txt
+/app-39c5e428ac9fc91cc1ce.js.LICENSE.txt
   Cache-Control: public, max-age=31536000, immutable
 /e971612a-065e791b5656696f6f16.js.LICENSE.txt
   Cache-Control: public, max-age=31536000, immutable
 /framework-a308cef34dcbb454fc83.js.LICENSE.txt
   Cache-Control: public, max-age=31536000, immutable
-/app-90f851ea18256b1c6dc4.js
+/app-39c5e428ac9fc91cc1ce.js
   Cache-Control: public, max-age=31536000, immutable
-/webpack-runtime-5af3d06ffecdf1e352e9.js
+/webpack-runtime-e816fa18748d91d1b5ab.js
   Cache-Control: public, max-age=31536000, immutable
 /714-87865ce30631e7c8ea8a.js
   Cache-Control: public, max-age=31536000, immutable
@@ -247,9 +247,9 @@
   Cache-Control: public, max-age=31536000, immutable
 /12f0e2adb77e2aea4d653246eb7792059d20bcc0-b8c9f2ea5ee69b2727ed.js
   Cache-Control: public, max-age=31536000, immutable
-/app-90f851ea18256b1c6dc4.js.map
+/app-39c5e428ac9fc91cc1ce.js.map
   Cache-Control: public, max-age=31536000, immutable
-/webpack-runtime-5af3d06ffecdf1e352e9.js.map
+/webpack-runtime-e816fa18748d91d1b5ab.js.map
   Cache-Control: public, max-age=31536000, immutable
 /714-87865ce30631e7c8ea8a.js.map
   Cache-Control: public, max-age=31536000, immutable
