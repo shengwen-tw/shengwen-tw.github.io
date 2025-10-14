@@ -145,7 +145,7 @@ module.exports = {
       title: 'Conference Papers',
       data: [
         {
-	  title: 'S.-W. Cheng and T.-H. Cheng, “Data-Driven Estimation of Quadrotor Motor Efficiency via Residual Minimization,” manuscript under review.',
+	  title: 'S.-W. Cheng and T.-H. Cheng, “Data-Driven Estimation of Quadrotor Motor Efficiency via Residual Minimization,” under review, [arXiv:2510.11388](https://arxiv.org/abs/2510.11388).',
 	  location: '',
 	  date: '',
         }, {
