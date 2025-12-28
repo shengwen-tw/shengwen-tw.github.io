@@ -45,12 +45,12 @@ module.exports = {
       url: 'https://www.linkedin.com/in/shengwen-tw/',
       icon: ['fab', 'linkedin'],
     }, {
-      url: 'https://scholar.google.com.tw/citations?user=RCZ5dUgAAAAJ&hl=zh-TW',
-      icon: ['fab', 'google-scholar'],
-    }, {
       url: 'https://orcid.org/0009-0002-9783-1451',
       icon: ['fab', 'fa-orcid'],
-    }
+    }, {
+      url: 'https://scholar.google.com.tw/citations?user=RCZ5dUgAAAAJ&hl=zh-TW',
+      icon: ['fab', 'google-scholar'],
+    },
   ],
   // facebook: 'https://www.facebook.com/rolwin.monteiro',
   // instagram: 'https://www.instagram.com/reevan100/',
