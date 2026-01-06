@@ -15,7 +15,7 @@ module.exports = {
   avatar: 'profile.png',
   professions: [
     'Software Engineer',
-    'Robotics Engineer'
+    'Roboticist'
   ],
   tocMaxDepth: 2,
   excerptMaxLength: 500,
