@@ -3,6 +3,7 @@ title: "semu: a minimalist RISC-V system emulator capable of running Linux kerne
 tags: ["virtual machine", "Linux", "virtualization", "system software"]
 date: 2024-10
 path: "research/semu"
+selected: true 
 cover: "./tux.png"
 priority: 5
 ---
