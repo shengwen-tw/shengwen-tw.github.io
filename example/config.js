@@ -148,15 +148,15 @@ module.exports = {
       title: 'Conference Papers',
       data: [
         {
-	  title: 'S.-W. Cheng and T.-H. Cheng, “Data-Driven Estimation of Quadrotor Motor Efficiency via Residual Minimization,” under review, [arXiv:2510.11388](https://arxiv.org/abs/2510.11388).',
+	  title: 'S.-W. Cheng and T.-H. Cheng, “Data-Driven Estimation of Quadrotor Motor Efficiency via Residual Minimization,” American Control Conference (ACC), New Orleans, USA, 2026 (to appear). [arXiv:2510.11388](https://arxiv.org/abs/2510.11388).',
 	  location: '',
 	  date: '',
         }, {
-          title: 'S.-W. Cheng and Y.-H. Huang, “A Computationally Efficient GNSS/INS Design of Multirotor based on Error-state Kalman Filter,” 2023 62nd Annual Conference of the Society of Instrument and Control Engineers of Japan (SICE), Tsu, Japan, 2023. [[URL]](https://ieeexplore.ieee.org/abstract/document/10354209)',
+          title: 'S.-W. Cheng and Y.-H. Huang, “A Computationally Efficient GNSS/INS Design of Multirotor based on Error-state Kalman Filter,” 62nd Annual Conference of the Society of Instrument and Control Engineers of Japan (SICE), Tsu, Japan, 2023. [[URL]](https://ieeexplore.ieee.org/abstract/document/10354209)',
 	  location: '',
 	  date: '',
         }, {
-          title: 'S.-W. Cheng and H.-A. Hung, “Robust State-Feedback H∞ Control of Quadrotor,” 2022 International Automatic Control Conference (CACS), Kaohsiung, Taiwan, 2022. [[URL]](https://ieeexplore.ieee.org/document/9969787)',
+          title: 'S.-W. Cheng and H.-A. Hung, “Robust State-Feedback H∞ Control of Quadrotor,” International Automatic Control Conference (CACS), Kaohsiung, Taiwan, 2022. [[URL]](https://ieeexplore.ieee.org/document/9969787)',
 	  location: '',
 	  date: '',
         }, {
