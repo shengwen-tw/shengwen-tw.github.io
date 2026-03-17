@@ -106,6 +106,10 @@ module.exports = {
           title: 'International Conferences',
           data: [
             {
+  	      title: 'OSSNA 2026: Demystifying VirtIO-GPU: Building a Graphics Virtualization Bridge from Scratch',
+  	      location: 'Minneapolis, Minnesota, USA',
+	      date: 'May 18 2026',
+            }, {
   	      title: 'EOSS 2024: Crafting a Vision-Aided Software Stack for UAV [[Video]](https://www.youtube.com/watch?v=xTfPdS7LA34) [[Slides]](https://drive.google.com/file/d/1aXPNn7SbN5oBkVzIqHo13JiRVv_63CJi/view?usp=sharing)',
   	      location: 'Seattle, Washington, USA',
 	      date: 'Apr 16 2024',
@@ -116,7 +120,7 @@ module.exports = {
             }
           ],
         }, {
-        title: 'Domestic Conferences',
+        title: 'Regional Conferences',
         data: [
           {
             title: 'COSCUP 2024: Creating a Linux-like Real-Time Operating System for Quadrotor Drones [[Video]](https://www.youtube.com/watch?v=Ft4jBW732nU) [[Slides]](https://drive.google.com/file/d/16S8ZRC-lhT15CXwWIy-RIIWXl5Ertqo5/view)',
