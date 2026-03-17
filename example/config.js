@@ -113,16 +113,16 @@ module.exports = {
   	      title: 'EOSS 2024: Crafting a Vision-Aided Software Stack for UAV [[Video]](https://www.youtube.com/watch?v=xTfPdS7LA34) [[Slides]](https://drive.google.com/file/d/1aXPNn7SbN5oBkVzIqHo13JiRVv_63CJi/view?usp=sharing)',
   	      location: 'Seattle, Washington, USA',
 	      date: 'Apr 16 2024',
-            }, {
-  	      title: 'OpenTechConf 2025: Building a Quadrotor Simulator with Python - Modeling, Simulation, and Control [[Slides]](https://drive.google.com/file/d/1Oc-OfTaBOS4-Ut4LMXkFd4vc9sJBr5s8/view?fbclid=IwY2xjawM0sS9leHRuA2FlbQIxMABicmlkETFQS240alZ0d0pCS0hXRXN3AR4c9Y9pQykGagwCiAT0a84OlyRuoPozOFF2ng8ZyYwwvKGd4m7W91oPA3xw9A_aem_5FYP7iKGktVP1OJBBpa-mA)',
-  	      location: 'AWS Office in Hong Kong',
-	      date: 'Sep 13 2025',
             }
           ],
         }, {
         title: 'Regional Conferences',
         data: [
           {
+  	      title: 'OpenTechConf 2025: Building a Quadrotor Simulator with Python - Modeling, Simulation, and Control [[Slides]](https://drive.google.com/file/d/1Oc-OfTaBOS4-Ut4LMXkFd4vc9sJBr5s8/view?fbclid=IwY2xjawM0sS9leHRuA2FlbQIxMABicmlkETFQS240alZ0d0pCS0hXRXN3AR4c9Y9pQykGagwCiAT0a84OlyRuoPozOFF2ng8ZyYwwvKGd4m7W91oPA3xw9A_aem_5FYP7iKGktVP1OJBBpa-mA)',
+  	      location: 'AWS Office in Hong Kong',
+	      date: 'Sep 13 2025',
+          }, {
             title: 'COSCUP 2024: Creating a Linux-like Real-Time Operating System for Quadrotor Drones [[Video]](https://www.youtube.com/watch?v=Ft4jBW732nU) [[Slides]](https://drive.google.com/file/d/16S8ZRC-lhT15CXwWIy-RIIWXl5Ertqo5/view)',
 	    location: 'Taipei, Taiwan',
 	    date: 'Aug 3 2024',
