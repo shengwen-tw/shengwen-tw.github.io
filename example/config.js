@@ -108,7 +108,7 @@ module.exports = {
             {
   	      title: 'OSSNA 2026: Demystifying VirtIO-GPU: Building a Graphics Virtualization Bridge from Scratch',
   	      location: 'Minneapolis, Minnesota, USA',
-	      date: 'May 18 2026',
+	      date: 'May 19 2026',
             }, {
   	      title: 'EOSS 2024: Crafting a Vision-Aided Software Stack for UAV [[Video]](https://www.youtube.com/watch?v=xTfPdS7LA34) [[Slides]](https://drive.google.com/file/d/1aXPNn7SbN5oBkVzIqHo13JiRVv_63CJi/view?usp=sharing)',
   	      location: 'Seattle, Washington, USA',
