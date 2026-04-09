@@ -176,9 +176,6 @@ module.exports = {
       date: 'Feb 2024 - Present',
       title: 'System Software Engineer at NVIDIA',
     }, {
-      date: 'Sep 2023 - Feb 2024',
-      title: 'Software Engineer at GallopWave',
-    }, {
       date: 'Sep 2018 - Apr 2021',
       title: 'Embedded System Engineer at Avilon Intelligence',
     },
