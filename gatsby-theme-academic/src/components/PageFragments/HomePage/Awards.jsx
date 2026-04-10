@@ -21,12 +21,13 @@ const splitTitleAndCompany = (title = '') => {
 
 const AwardItem = (data) => {
   const { role, company } = splitTitleAndCompany(data.title);
+  const primaryTitle = company || data.description || data.company || data.location;
 
   return (
     <TimelineEvent
-      title={role}
+      title={primaryTitle}
       titleStyle={{ fontSize: '11pt', fontWeight: 'bold' }}
-      subtitle={company || data.description || data.company || data.location}
+      subtitle={role}
       subtitleStyle={{ fontSize: '12pt', fontWeight: '400' }}
       createdAt={<div style={{ color: 'var(--rs-text-secondary)' }}>{data.date}</div>}
       style={{ fontSize: '11pt', fontWeight: '300' }}
