@@ -165,15 +165,15 @@
   Cache-Control: public, max-age=31536000, immutable
 /99908690-3305a1e335fc18cc94da.js.LICENSE.txt
   Cache-Control: public, max-age=31536000, immutable
-/app-059b7eea6dd9d86e888f.js.LICENSE.txt
+/app-c71a1bec816f8128fbbd.js.LICENSE.txt
   Cache-Control: public, max-age=31536000, immutable
 /e971612a-065e791b5656696f6f16.js.LICENSE.txt
   Cache-Control: public, max-age=31536000, immutable
 /framework-a308cef34dcbb454fc83.js.LICENSE.txt
   Cache-Control: public, max-age=31536000, immutable
-/app-059b7eea6dd9d86e888f.js
+/app-c71a1bec816f8128fbbd.js
   Cache-Control: public, max-age=31536000, immutable
-/webpack-runtime-82af660622a1b036d225.js
+/webpack-runtime-3f4b1b7dca09ba59fc05.js
   Cache-Control: public, max-age=31536000, immutable
 /714-87865ce30631e7c8ea8a.js
   Cache-Control: public, max-age=31536000, immutable
@@ -187,7 +187,7 @@
   Cache-Control: public, max-age=31536000, immutable
 /component---gatsby-theme-academic-src-pages-404-index-jsx-10c30a41e120d8414cd2.js
   Cache-Control: public, max-age=31536000, immutable
-/component---gatsby-theme-academic-src-pages-index-jsx-2b6fd46016db5ed71211.js
+/component---gatsby-theme-academic-src-pages-index-jsx-ed285663ac6daf9bcc3a.js
   Cache-Control: public, max-age=31536000, immutable
 /component---gatsby-theme-academic-src-pages-posts-index-jsx-9d257d73c682166fe374.js
   Cache-Control: public, max-age=31536000, immutable
@@ -249,9 +249,9 @@
   Cache-Control: public, max-age=31536000, immutable
 /12f0e2adb77e2aea4d653246eb7792059d20bcc0-6e990876fc5f280afbe1.js
   Cache-Control: public, max-age=31536000, immutable
-/app-059b7eea6dd9d86e888f.js.map
+/app-c71a1bec816f8128fbbd.js.map
   Cache-Control: public, max-age=31536000, immutable
-/webpack-runtime-82af660622a1b036d225.js.map
+/webpack-runtime-3f4b1b7dca09ba59fc05.js.map
   Cache-Control: public, max-age=31536000, immutable
 /714-87865ce30631e7c8ea8a.js.map
   Cache-Control: public, max-age=31536000, immutable
@@ -265,7 +265,7 @@
   Cache-Control: public, max-age=31536000, immutable
 /component---gatsby-theme-academic-src-pages-404-index-jsx-10c30a41e120d8414cd2.js.map
   Cache-Control: public, max-age=31536000, immutable
-/component---gatsby-theme-academic-src-pages-index-jsx-2b6fd46016db5ed71211.js.map
+/component---gatsby-theme-academic-src-pages-index-jsx-ed285663ac6daf9bcc3a.js.map
   Cache-Control: public, max-age=31536000, immutable
 /component---gatsby-theme-academic-src-pages-posts-index-jsx-9d257d73c682166fe374.js.map
   Cache-Control: public, max-age=31536000, immutable
