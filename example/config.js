@@ -177,7 +177,7 @@ module.exports = {
       title: 'System Software Engineer at NVIDIA',
     }, {
       date: 'Sep 2018 - Apr 2021',
-      title: 'Embedded System Engineer at Avilon Intelligence',
+      title: 'Embedded Systems Engineer at Avilon Intelligence',
     },
   ],
   tagColors: [
