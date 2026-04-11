@@ -67,7 +67,7 @@ module.exports = {
   googleAnalyticTrackingId: process.env.GA_TRACKING_ID || 'G-ZK3P43DY6M',
   education: [
     {
-      date: 'Aug 2025 - May 2027',
+      date: 'Aug 2025 - Dec 2026',
       icon: 'university',
       title: 'M.S. in Computer Science',
       location: 'The University of Texas at Austin, USA',
