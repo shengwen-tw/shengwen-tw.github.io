@@ -119,6 +119,10 @@ module.exports = {
         title: 'Regional Conferences',
         data: [
           {
+  	      title: 'Sciwork Seminar 2026: Flying Drones in Simulation - An Introduction to Quadrotor Optimal Control and Reinforcement Learning',
+  	      location: 'Hsinchu, Taiwan',
+	      date: 'June 13 2026',
+          }, {
   	      title: 'OpenTechConf 2025: Building a Quadrotor Simulator with Python - Modeling, Simulation, and Control [[Slides]](https://drive.google.com/file/d/1Oc-OfTaBOS4-Ut4LMXkFd4vc9sJBr5s8/view?fbclid=IwY2xjawM0sS9leHRuA2FlbQIxMABicmlkETFQS240alZ0d0pCS0hXRXN3AR4c9Y9pQykGagwCiAT0a84OlyRuoPozOFF2ng8ZyYwwvKGd4m7W91oPA3xw9A_aem_5FYP7iKGktVP1OJBBpa-mA)',
   	      location: 'AWS Office in Hong Kong',
 	      date: 'Sep 13 2025',
