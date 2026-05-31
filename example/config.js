@@ -156,7 +156,7 @@ module.exports = {
       title: 'Conference Papers',
       data: [
         {
-	  title: 'S.-W. Cheng and T.-H. Cheng, “Data-Driven Estimation of Quadrotor Motor Efficiency via Residual Minimization,” American Control Conference (ACC), New Orleans, USA, 2026 (to appear). [arXiv:2510.11388](https://arxiv.org/abs/2510.11388).',
+	  title: 'S.-W. Cheng and T.-H. Cheng, “Data-Driven Estimation of Quadrotor Motor Efficiency via Residual Minimization,” American Control Conference (ACC), New Orleans, USA, 2026. [arXiv:2510.11388](https://arxiv.org/abs/2510.11388).',
 	  location: '',
 	  date: '',
         }, {
