@@ -106,7 +106,7 @@ module.exports = {
           title: 'International Conferences',
           data: [
             {
-  	      title: 'OSSNA 2026: Demystifying VirtIO-GPU: Building a Graphics Virtualization Bridge from Scratch [[Slides]](https://drive.google.com/file/d/10wy7cwmIsmio1vyK8wGzJcXoRXqTLwY5/view?usp=sharing)',
+  	      title: 'OSSNA 2026: Demystifying VirtIO-GPU: Building a Graphics Virtualization Bridge from Scratch [[Video]](https://www.youtube.com/watch?v=BDDEyVUcTLw) [[Slides]](https://drive.google.com/file/d/10wy7cwmIsmio1vyK8wGzJcXoRXqTLwY5/view?usp=sharing)',
   	      location: 'Minneapolis, Minnesota, USA',
 	      date: 'May 19 2026',
             }, {
