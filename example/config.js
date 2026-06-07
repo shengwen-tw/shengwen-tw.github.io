@@ -8,9 +8,9 @@ module.exports = {
   introduction: [
 'Hi, I’m Sheng-Wen (Colin) Cheng, a system software engineer with the [Platform Security Controller (PSC)](https://docs.nvidia.com/jetson/archives/r34.1/DeveloperGuide/text/AR/BootArchitecture/JetsonAgxOrinBootFlow.html) team at NVIDIA, where I develop secure bootloader software to ensure system integrity during the boot process. Beyond my role at NVIDIA, I build low-level software at the intersection of robotics, control engineering, and real-time systems.',
 
-'I have a strong background in hardware-software integration, with work spanning robotics, embedded systems, real-time operating systems (RTOS), and virtual machines. A representative project from my research at the [Networked Control Robotics Lab (NCRL)](https://en.ncrl.lab.nycu.edu.tw/), under the supervision of [Dr. Teng-Hu Cheng](https://me.nycu.edu.tw/en/people/teacher/Teng-Hu-Cheng-18641258), was a quadrotor flight control system built with nonlinear control and sensor fusion algorithms. The system was licensed to the [Taiwan Space Agency (TASA)](https://www.tasa.org.tw/en-US) for scientific research purposes.',
+'I have a strong background in hardware-software integration, with work spanning robotics, embedded systems, real-time operating systems (RTOS), and virtual machines. A representative [project](/research/flight-control/) from my research at the [Networked Control Robotics Lab (NCRL)](https://en.ncrl.lab.nycu.edu.tw/), under the supervision of [Dr. Teng-Hu Cheng](https://me.nycu.edu.tw/en/people/teacher/Teng-Hu-Cheng-18641258), was a quadrotor flight control system built with nonlinear control and sensor fusion algorithms. The system was licensed to the [Taiwan Space Agency (TASA)](https://www.tasa.org.tw/en-US) for scientific research purposes.',
 
-'I am also an active open-source contributor and have presented my work at leading open-source events, including [Open Source Summit](https://events.linuxfoundation.org/open-source-summit-north-america/) organized by the Linux Foundation.',
+'I am also an active open-source contributor and have presented my work at leading open-source events, including [Open Source Summit](https://events.linuxfoundation.org/open-source-summit-north-america/) organized by the [Linux Foundation](https://www.linuxfoundation.org/).',
   ],
   avatar: 'profile.png',
   professions: [
@@ -160,15 +160,15 @@ module.exports = {
 	  location: '',
 	  date: '',
         }, {
-          title: 'S.-W. Cheng and Y.-H. Huang, “A Computationally Efficient GNSS/INS Design of Multirotor based on Error-state Kalman Filter,” 62nd Annual Conference of the Society of Instrument and Control Engineers of Japan (SICE), Tsu, Japan, 2023. [[URL]](https://ieeexplore.ieee.org/abstract/document/10354209)',
+          title: 'S.-W. Cheng and Y.-H. Huang, “A Computationally Efficient GNSS/INS Design of Multirotor based on Error-state Kalman Filter,” 62nd Annual Conference of the Society of Instrument and Control Engineers of Japan (SICE), Tsu, Japan, 2023. [doi:10.23919/SICE59929.2023.10354209](https://doi.org/10.23919/SICE59929.2023.10354209).',
 	  location: '',
 	  date: '',
         }, {
-          title: 'S.-W. Cheng and H.-A. Hung, “Robust State-Feedback H∞ Control of Quadrotor,” International Automatic Control Conference (CACS), Kaohsiung, Taiwan, 2022. [[URL]](https://ieeexplore.ieee.org/document/9969787)',
+          title: 'S.-W. Cheng and H.-A. Hung, “Robust State-Feedback H∞ Control of Quadrotor,” International Automatic Control Conference (CACS), Kaohsiung, Taiwan, 2022. [doi:10.1109/CACS55319.2022.9969787](https://doi.org/10.1109/CACS55319.2022.9969787).',
 	  location: '',
 	  date: '',
         }, {
-          title: 'S.-W. Wang, S.-W. Cheng, and C.-C. Huang, “Puyuma: Linux-based RTOS Experimental Platform for Constructing Self-Driving Miniature Vehicles,” Science and Information Conference (SAI), London, United Kingdom, 2018. [[URL]](https://link.springer.com/chapter/10.1007/978-3-030-01174-1_75)',
+          title: 'S.-W. Wang, S.-W. Cheng, and C.-C. Huang, “Puyuma: Linux-based RTOS Experimental Platform for Constructing Self-Driving Miniature Vehicles,” Science and Information Conference (SAI), London, United Kingdom, 2018. [doi:10.1007/978-3-030-01174-1_75](https://doi.org/10.1007/978-3-030-01174-1_75).',
 	  location: '',
 	  date: '',
         },
