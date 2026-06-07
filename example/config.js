@@ -93,7 +93,7 @@ module.exports = {
       title: 'Robotics, Control, and Estimation',
     }, {
       icon: 'layer-group',
-      title: 'Machine Learning',
+      title: 'Autonomous Systems and Machine Learning',
     }, {
       icon: ['fas', 'fa-microchip'],
       title: 'Embedded/Real-time Systems',
