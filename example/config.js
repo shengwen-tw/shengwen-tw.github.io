@@ -103,7 +103,7 @@ module.exports = {
     }],
     talks: [
         {
-          title: 'International Conferences',
+          title: 'Featured Presentations',
           data: [
             {
   	      title: 'OSSNA 2026: Demystifying VirtIO-GPU: Building a Graphics Virtualization Bridge from Scratch [[Video]](https://www.youtube.com/watch?v=BDDEyVUcTLw) [[Slides]](https://drive.google.com/file/d/10wy7cwmIsmio1vyK8wGzJcXoRXqTLwY5/view?usp=sharing)',
@@ -116,10 +116,10 @@ module.exports = {
             }
           ],
         }, {
-        title: 'Regional Conferences',
+        title: 'Community Conferences',
         data: [
           {
-  	      title: 'Sciwork Seminar 2026: Flying Drones in Simulation - An Introduction to Quadrotor Optimal Control and Reinforcement Learning',
+  	      title: 'Sciwork Seminar 2026: From Optimal Control to Reinforcement Learning for Quadrotor Drones',
   	      location: 'Hsinchu, Taiwan',
 	      date: 'June 13 2026',
           }, {
