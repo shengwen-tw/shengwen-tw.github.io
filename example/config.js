@@ -119,6 +119,10 @@ module.exports = {
         title: 'Community Conferences',
         data: [
           {
+  	      title: 'COSCUP 2026: The Illusion of Hardware: How Modern Virtual Machines Work',
+  	      location: 'Taipei, Taiwan',
+	      date: 'Aug 2026',
+          },          {
   	      title: 'Sciwork Seminar 2026: From Optimal Control to Reinforcement Learning for Quadrotor Drones',
   	      location: 'Hsinchu, Taiwan',
 	      date: 'June 13 2026',
