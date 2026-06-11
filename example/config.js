@@ -131,13 +131,17 @@ module.exports = {
   	      location: 'AWS Office in Hong Kong',
 	      date: 'Sep 13 2025',
           }, {
-            title: 'COSCUP 2024: Creating a Linux-like Real-Time Operating System for Quadrotor Drones [[Video]](https://www.youtube.com/watch?v=Ft4jBW732nU) [[Slides]](https://drive.google.com/file/d/16S8ZRC-lhT15CXwWIy-RIIWXl5Ertqo5/view)',
-	    location: 'Taipei, Taiwan',
-	    date: 'Aug 3 2024',
+              title: 'MOPCON 2024 Keynote: Trends in Machine Learning for Unmanned Aerial Vehicle Applications [[Slides]](https://drive.google.com/file/d/1UmSeU8Y63s4cASBFNWM_zi5ll2J9EIJx/view?usp=sharing)',
+              location: 'Kaohsiung, Taiwan',
+              date: 'Oct 26 2024',
           }, {
-            title: 'COSCUP 2023: Tenok - Build a Real-Time Operating System for Robotics [[Video]](https://www.youtube.com/watch?v=w87l__ShgVw) [[Slides]](https://drive.google.com/file/d/1p8YJVPVwFAEknMXPbXzjj0y0p5qcqT2T/view)',
-	    location: 'Taipei, Taiwan',
-	    date: 'Jul 29 2023',
+              title: 'COSCUP 2024: Creating a Linux-like Real-Time Operating System for Quadrotor Drones [[Video]](https://www.youtube.com/watch?v=Ft4jBW732nU) [[Slides]](https://drive.google.com/file/d/16S8ZRC-lhT15CXwWIy-RIIWXl5Ertqo5/view)',
+    	      location: 'Taipei, Taiwan',
+	      date: 'Aug 3 2024',
+          }, {
+              title: 'COSCUP 2023: Tenok - Build a Real-Time Operating System for Robotics [[Video]](https://www.youtube.com/watch?v=w87l__ShgVw) [[Slides]](https://drive.google.com/file/d/1p8YJVPVwFAEknMXPbXzjj0y0p5qcqT2T/view)',
+	      location: 'Taipei, Taiwan',
+	      date: 'Jul 29 2023',
           },
         ],
       }, {
@@ -147,11 +151,7 @@ module.exports = {
             title: 'PEGATRON Corporation: Trends and Lessons Learned in Deep Learning and Generative AI Applications for UAV',
   	    location: 'Taipei, Taiwan',
 	    date: 'Dec 19 2024',
-          }, {
-            title: 'MOPCON 2024 Keynote Speech: Trends in Machine Learning for Unmanned Aerial Vehicle Applications [[Slides]](https://drive.google.com/file/d/1UmSeU8Y63s4cASBFNWM_zi5ll2J9EIJx/view?usp=sharing)',
-	    location: 'Kaohsiung, Taiwan',
-	    date: 'Oct 26 2024',
-          },
+          }
         ],
       },
     ],
