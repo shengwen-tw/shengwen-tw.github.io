@@ -14,6 +14,19 @@ import moment from 'moment';
 // const researchTags = _.filter(tags, { research: true });
 // const postsTags = _.filter(tags, { posts: true });
 
+const isAbsoluteUrl = (url) => /^[a-z][a-z\d+\-.]*:\/\//i.test(url);
+const hasTrailingSlash = (paths) => {
+  const lastPath = paths
+    .map((path) => path.toString().trim())
+    .filter(Boolean)
+    .pop();
+
+  return lastPath ? lastPath.endsWith('/') : false;
+};
+const preserveTrailingSlash = (url, shouldPreserve) => (
+  shouldPreserve && !url.endsWith('/') ? `${url}/` : url
+);
+
 const CommonUtils = {
   /**
      * Generate full url, use localhost in dev mode
@@ -22,6 +35,12 @@ const CommonUtils = {
      * @returns {string}
      */
   generateFullUrl: (siteMetaData, ...path) => {
+    const shouldPreserveTrailingSlash = hasTrailingSlash(path);
+
+    if (path.length > 0 && isAbsoluteUrl(path[0].toString().trim())) {
+      return preserveTrailingSlash(CommonUtils.resolveUrl(...path), shouldPreserveTrailingSlash);
+    }
+
     let urlPrefix;
     if (process && process.env.NODE_ENV !== 'production') {
       urlPrefix = 'http://127.0.0.1:8000/';
@@ -40,7 +59,10 @@ const CommonUtils = {
     if (urlPrefix[urlPrefix.length - 1] === '/') {
       urlPrefix = urlPrefix.substring(0, urlPrefix.length - 1);
     }
-    return urlPrefix + CommonUtils.resolveUrl(...path);
+    return preserveTrailingSlash(
+      urlPrefix + CommonUtils.resolveUrl(...path),
+      shouldPreserveTrailingSlash,
+    );
   },
 
   /**
@@ -48,18 +70,27 @@ const CommonUtils = {
      * @param {...string} paths Provided paths. It doesn't matter if they have trailing slash.
      * @return {string} Resolved url without trailing slash.
      */
-  resolveUrl: (...paths) =>
-    paths.reduce((resolvedUrl, path) => {
-      const urlPath = path.toString().trim();
-      if (urlPath) {
-        // eslint-disable-next-line no-param-reassign
-        resolvedUrl +=
-                    (resolvedUrl === '' ? '' : '/') + urlPath.replace(/^\/|\/$/g, '');
-      }
+  resolveUrl: (...paths) => {
+    const normalizedPaths = paths
+      .map((path) => path.toString().trim())
+      .filter(Boolean);
 
-      resolvedUrl = resolvedUrl[0] !== '/' ? `/${resolvedUrl}` : resolvedUrl;
-      return resolvedUrl;
-    }, ''),
+    if (normalizedPaths.length === 0) return '/';
+
+    const [firstPath, ...remainingPaths] = normalizedPaths;
+    const suffix = remainingPaths
+      .map((path) => path.replace(/^\/+|\/+$/g, ''))
+      .filter(Boolean)
+      .join('/');
+
+    if (isAbsoluteUrl(firstPath)) {
+      const prefix = firstPath.replace(/\/+$/g, '');
+      return suffix ? `${prefix}/${suffix}` : prefix;
+    }
+
+    const prefix = firstPath.replace(/^\/+|\/+$/g, '');
+    return `/${[prefix, suffix].filter(Boolean).join('/')}`;
+  },
   /**
      * Resolve a page url adding a trailing slash.
      * Needed to prevent 301 redirects cause of Gatsby.js' folder structure.
@@ -68,7 +99,12 @@ const CommonUtils = {
      */
   resolvePageUrl: (...path) => {
     const resolvedUrl = CommonUtils.resolveUrl(...path);
-    return resolvedUrl;
+    if (resolvedUrl === '/' || resolvedUrl.endsWith('/')) return resolvedUrl;
+
+    const pathname = resolvedUrl.replace(/^[a-z][a-z\d+\-.]*:\/\/[^/]+/i, '');
+    if (/\.[^/]+$/.test(pathname)) return resolvedUrl;
+
+    return `${resolvedUrl}/`;
   },
   /**
      * Get an ordered list of suggested posts for a single post.

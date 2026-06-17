@@ -41,15 +41,8 @@ function SEO({
         const metaKeywords = keywords && keywords.length > 0
           ? { name: 'keywords', content: keywords.join(', ') }
           : [];
-        const pageUrl = Utils.resolvePageUrl(
-          siteMetadata.siteUrl,
-          siteMetadata.pathPrefix,
-          path,
-        );
-        const metaImageUrl = Utils.resolveUrl(
-          siteMetadata.siteUrl,
-          imageUrl || getSrc(data.file),
-        );
+        const pageUrl = Utils.generateFullUrl(siteMetadata, Utils.resolvePageUrl(path));
+        const metaImageUrl = Utils.generateFullUrl(siteMetadata, imageUrl || getSrc(data.file));
 
         return (
           <Helmet
@@ -92,11 +85,7 @@ function SEO({
                   ? translations.map((obj) => ({
                     rel: 'alternate',
                     hreflang: obj.hreflang,
-                    href: Utils.resolvePageUrl(
-                      siteMetadata.siteUrl,
-                      siteMetadata.pathPrefix,
-                      obj.path,
-                    ),
+                    href: Utils.generateFullUrl(siteMetadata, Utils.resolvePageUrl(obj.path)),
                   }))
                   : [],
               )}

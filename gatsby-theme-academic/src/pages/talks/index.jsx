@@ -50,7 +50,7 @@ const Experience = () => {
         title="Talks"
         description="This page consists of various Tags on various technologies that I'll be using
           to write blogs. You can check the blogs related to the tags by clicking on any of the tags below."
-        path="publications"
+        path="talks"
       />
       <div className="marginTopTitle">
         <h1 className="titleSeparate">Talks</h1>
