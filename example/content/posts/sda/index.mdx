@@ -1,0 +1,523 @@
+---
+title: "Structure-preserving Doubling Algorithm"
+tags: ["notes"]
+date: 2026-06-18
+cover: "./sda_book.png"
+path: "posts/sda"
+---
+
+## 1. Introduction
+
+Algebraic Riccati Equations arise frequently in optimal control problems such as the Linear Quadratic Regulator (LQR) and $H_\infty$ control. This note briefly summarizes the core concepts of how the **Structure-preserving Doubling Algorithm (SDA)** solves Algebraic Riccati Equation problems.
+
+SDA is a fast, structure-aware iterative method. Its key idea is to transform the Riccati problem into a structured matrix pencil problem and then repeatedly apply a doubling transformation. This transformation drives stable eigenvalues rapidly toward zero and leads to fast convergence.
+
+For more details, please refer to:
+
+* [A structure-preserving doubling algorithm for continuous-time algebraic Riccati equations](https://doi.org/10.1016/j.laa.2004.10.010)
+* [Structured doubling algorithms for weakly stabilizing Hermitian solutions of algebraic Riccati equations](https://doi.org/10.1016/j.laa.2007.08.043)
+* [Structure-Preserving Doubling Algorithms for Nonlinear Matrix Equations](https://doi.org/10.1137/1.9781611975369)
+
+We begin by introducing two common types of Algebraic Riccati Equations:
+
+* **DARE:** Discrete-time Algebraic Riccati Equation
+* **CARE:** Continuous-time Algebraic Riccati Equation
+
+
+---
+
+### 1.1 DARE
+
+The **Discrete-time Algebraic Riccati Equation (DARE)** commonly appears in discrete-time LQR problems. A common form is
+
+$$
+X = A^T X (I + G X)^{-1} A + H,
+$$
+
+where $G \succeq 0$ and $H \succeq 0$. In the discrete-time LQR setting, these matrices are usually related to the system and cost matrices by
+
+$$
+G = B R^{-1} B^T, \qquad H = Q,
+$$
+
+with $Q \succeq 0$, $R \succ 0$, and the pair $(A,B)$ assumed to be stabilizable. The stabilizing solution $X$ is the solution such that
+
+$$
+A(I + GX)^{-1}
+$$
+
+is stable, meaning that all eigenvalues lie inside the unit disk.
+
+The corresponding discrete-time LQR problem is
+
+$$
+\begin{aligned}
+\min_{u} \quad & J =
+\frac{1}{2} \sum_{k=0}^{\infty}
+\left( x_k^{T} Q x_k + u_k^{T} R u_k \right) \\
+\textrm{s.t.} \quad & x_{k+1} = A x_k + B u_k .
+\end{aligned}
+$$
+
+The optimal control law is
+
+$$
+u_k^{*} = - (R + B^{T} X B)^{-1} B^{T} X A x_k,
+$$
+
+where $X$ is the stabilizing solution of the corresponding DARE.
+
+---
+
+### 1.2 CARE
+
+The **Continuous-time Algebraic Riccati Equation (CARE)** commonly appears in continuous-time LQR problems. A common form is
+
+$$
+A^T X + X A - X G X + H = 0,
+$$
+
+where $G \succeq 0$ and $H \succeq 0$. In the continuous-time LQR setting, one usually has
+
+$$
+G = B R^{-1} B^T, \qquad H = C^T C,
+$$
+
+with $C^T C \succeq 0$, $R \succ 0$, and the pair $(A,B)$ assumed to be stabilizable. The stabilizing solution $X$ is the solution such that
+
+$$
+A - GX
+$$
+
+is stable, meaning that all eigenvalues lie in the open left half-plane.
+
+The corresponding continuous-time LQR problem is
+
+$$
+\begin{aligned}
+\min_{u} \quad & J =
+\frac{1}{2} \int_{0}^{\infty}
+\left( x^{T} C^{T} C x + u^{T} R u \right) dt \\
+\textrm{s.t.} \quad & \dot{x} = A x + B u .
+\end{aligned}
+$$
+
+The optimal control law is
+
+$$
+u^{*} = - R^{-1} B^{T} X x .
+$$
+
+## 2. Preliminaries
+
+Before introducing SDA, we review several basic concepts used in Riccati equation problems, including matrix pencils, generalized eigenvalue problems, Hamiltonian matrices, symplectic matrices, equivalence transformations, and the Cayley transform.
+
+---
+
+### 2.1 Matrix Pencil and Generalized Eigenvalue Problem
+
+A **matrix pencil** is a pair of matrices $(N,L)$ that defines
+
+$$
+N - \lambda L.
+$$
+
+A generalized eigenpair $(\lambda, v)$ satisfies
+
+$$
+Nv = \lambda Lv,
+$$
+
+where $\lambda$ is the generalized eigenvalue and $v$ is the corresponding generalized eigenvector. The generalized eigenvalues are the roots of
+
+$$
+\det(N - \lambda L) = 0.
+$$
+
+The ordinary eigenvalue problem is a special case with $L = I$.
+
+In Riccati equation problems, the stabilizing solution is usually related to a stable invariant subspace of a structured matrix pencil. The main idea of SDA is to apply a structure-preserving doubling transformation. Under this transformation, stable eigenvalues are squared repeatedly:
+
+$$
+\lambda \rightarrow \lambda^2 \rightarrow \lambda^4 \rightarrow \cdots \rightarrow \lambda^{2^k}.
+$$
+
+Therefore, if $|\lambda| < 1$, then
+
+$$
+\lambda^{2^k} \rightarrow 0 \quad \text{as} \quad k \rightarrow \infty.
+$$
+
+As a result, the invariant subspace problem is transformed into a limiting problem related to a null space or a range space. This is the basic reason why SDA can extract the Riccati solution efficiently.
+
+---
+
+### 2.2 Hamiltonian Matrix
+
+For CARE, define the Hamiltonian matrix
+
+$$
+\mathcal{H} =
+\begin{bmatrix}
+A & -G \\
+-H & -A^T
+\end{bmatrix}.
+$$
+
+Let
+
+$$
+J =
+\begin{bmatrix}
+0 & I \\
+-I & 0
+\end{bmatrix}.
+$$
+
+If $G = G^T$ and $H = H^T$, then $\mathcal{H}$ satisfies
+
+$$
+\mathcal{H}^T J = -J \mathcal{H}.
+$$
+
+This structure implies that the eigenvalues of $\mathcal{H}$ occur in pairs:
+
+$$
+(\lambda, -\lambda).
+$$
+
+For CARE, the stabilizing solution corresponds to the stable invariant subspace of $\mathcal{H}$, which is associated with eigenvalues in the open left half-plane.
+
+---
+
+### 2.3 Symplectic Matrix
+
+A matrix $S$ is called **symplectic** if
+
+$$
+S^T J S = J.
+$$
+
+Symplectic structure is the discrete-time analogue of Hamiltonian structure. It is important in DARE and SDA because it preserves the spectral symmetry of the Riccati problem.
+
+For a symplectic matrix, eigenvalues occur in reciprocal pairs:
+
+$$
+(\lambda, \lambda^{-1}).
+$$
+
+In DARE, the stabilizing solution is related to the invariant subspace corresponding to eigenvalues inside the unit disk.
+
+---
+
+### 2.4 Equivalent Transformation
+
+Two pencils $(N,L)$ and $(\tilde{N},\tilde{L})$ are called **equivalent** if there exist invertible matrices $T_1$ and $T_2$ such that
+
+$$
+(\tilde{N}, \tilde{L}) = (T_1 N T_2, T_1 L T_2).
+$$
+
+This transformation preserves the generalized eigenvalues of the pencil. Therefore, it can be used to rewrite a pencil into a more convenient structured form without changing the original spectral problem.
+
+In SDA, equivalence transformations are used to convert the Riccati equation into a structured pencil form. The doubling iteration is then applied while preserving the Hamiltonian or symplectic structure.
+
+---
+
+### 2.5 Mobius Transform and Cayley Transform
+
+A **Mobius transform** is a mapping of the form
+
+$$
+\mu = \frac{a\lambda + b}{c\lambda + d},
+$$
+
+where
+
+$$
+ad - bc \neq 0.
+$$
+
+The **Cayley transform** is a special Mobius transform. For $\gamma > 0$, it can be written as
+
+$$
+\mu = \frac{\lambda + \gamma}{\lambda - \gamma}.
+$$
+
+This transform maps the open left half-plane to the open unit disk:
+
+$$
+\text{Re}(\lambda) < 0 \quad \Longleftrightarrow \quad |\mu| < 1.
+$$
+
+Therefore, the Cayley transform converts a continuous-time stability condition into a discrete-time stability condition. This is useful for applying SDA to CARE, because CARE can first be transformed into a discrete-time structured pencil problem.
+
+## 3. Doubling Algorithm for the DARE Problem
+
+This section introduces SDA for solving the discrete-time algebraic Riccati equation. The main idea is to represent the DARE by a structured symplectic pencil and then apply a doubling transformation. During the iteration, the pencil keeps the same structure, while the stable eigenvalues are repeatedly squared and driven rapidly toward zero.
+
+---
+
+### 3.1 Standard Symplectic Form
+
+For the DARE
+
+$$
+X = A^T X (I + G X)^{-1} A + H,
+$$
+
+the associated symplectic pencil can be written in the **Standard Symplectic Form (SSF)** as
+
+$$
+N =
+\begin{bmatrix}
+A & 0 \\
+-H & I
+\end{bmatrix},
+\qquad
+L =
+\begin{bmatrix}
+I & G \\
+0 & A^T
+\end{bmatrix}.
+$$
+
+This form is important because it is closed under the doubling transformation. That is, after one doubling step, the transformed pencil can still be written in the same SSF form, but with updated matrices.
+
+Starting from
+
+$$
+(A_0, G_0, H_0) = (A, G, H),
+$$
+
+each iteration produces a new triple
+
+$$
+(A_{k+1}, G_{k+1}, H_{k+1}),
+$$
+
+while preserving the same symplectic structure.
+
+---
+
+### 3.2 Squaring Principle
+
+The key idea of the doubling method is eigenvalue squaring. Suppose that
+
+$$
+Nv = \lambda Lv,
+$$
+
+where $\lambda$ is a generalized eigenvalue of the pencil $(N,L)$. After one doubling step, the corresponding eigenvalue is mapped to
+
+$$
+\lambda \mapsto \lambda^2.
+$$
+
+After $k$ doubling steps, the eigenvalue becomes
+
+$$
+\lambda \mapsto \lambda^{2^k}.
+$$
+
+Therefore, if $|\lambda| < 1$, then
+
+$$
+|\lambda|^{2^k} \rightarrow 0.
+$$
+
+Thus, the doubling step separates the stable and unstable spectral components rapidly. This spectral separation is the key mechanism behind SDA for the DARE problem.
+
+---
+
+### 3.3 Doubling Recurrence for DARE
+
+The SDA iteration starts from
+
+$$
+(A_0, G_0, H_0) = (A, G, H).
+$$
+
+For $k = 0,1,2,\ldots$, define
+
+$$
+A_{k+1} = A_k (I + G_k H_k)^{-1} A_k,
+$$
+
+$$
+G_{k+1} = G_k + A_k G_k (I + H_k G_k)^{-1} A_k^T,
+$$
+
+$$
+H_{k+1} = H_k + A_k^T (I + H_k G_k)^{-1} H_k A_k.
+$$
+
+Under suitable assumptions, the matrices $G_k$ and $H_k$ remain symmetric positive semidefinite during the iteration. In addition, if the associated symplectic pencil has no eigenvalues on the unit circle, then
+
+$$
+A_k \rightarrow 0,
+$$
+
+and
+
+$$
+H_k \rightarrow X_\star,
+$$
+
+where $X_\star$ is the stabilizing solution of the DARE.
+
+Therefore, the stabilizing DARE solution can be obtained by iterating the above recurrence until $H_k$ converges.
+
+A rigorous convergence proof can be found in Section 3.4 of *[Structure-Preserving Doubling Algorithms for Nonlinear Matrix Equations](https://doi.org/10.1137/1.9781611975369)*.
+
+## 4. Structure-preserving Doubling Algorithm for the CARE Problem
+
+SDA can also be applied to the continuous-time algebraic Riccati equation. The main idea is to transform the CARE problem into a DARE-like structured pencil by using the Cayley transform and equivalence transformations. Once the pencil is written in SSF, the same doubling recurrence used for DARE can be applied.
+
+---
+
+### Step 1: Form the Hamiltonian Matrix
+
+Consider the CARE
+
+$$
+A^T X + X A - X G X + H = 0.
+$$
+
+The associated Hamiltonian matrix is
+
+$$
+\mathcal{H} =
+\begin{bmatrix}
+A & -G \\
+-H & -A^T
+\end{bmatrix}.
+$$
+
+The stabilizing solution of the CARE is related to the stable invariant subspace of $\mathcal{H}$.
+
+---
+
+### Step 2: Apply the Cayley Transform
+
+Choose $\gamma > 0$ such that $\mathcal{H} - \gamma I$ is invertible. Define the Cayley-transformed pencil
+
+$$
+N = \mathcal{H} + \gamma I, \qquad L = \mathcal{H} - \gamma I.
+$$
+
+Equivalently, using the block form of $\mathcal{H}$, we have
+
+$$
+N =
+\begin{bmatrix}
+A + \gamma I & -G \\
+-H & -A^T + \gamma I
+\end{bmatrix},
+\qquad
+L =
+\begin{bmatrix}
+A - \gamma I & -G \\
+-H & -A^T - \gamma I
+\end{bmatrix}.
+$$
+
+The generalized eigenvalue relation
+
+$$
+Nv = \mu Lv
+$$
+
+corresponds to the Cayley transform
+
+$$
+\mu = \frac{\lambda + \gamma}{\lambda - \gamma},
+$$
+
+where $\lambda$ is an eigenvalue of $\mathcal{H}$. This transform maps the open left half-plane to the open unit disk:
+
+$$
+\text{Re}(\lambda) < 0 \quad \Longrightarrow \quad |\mu| < 1.
+$$
+
+Therefore, the continuous-time stable invariant subspace of $\mathcal{H}$ is converted into a discrete-time stable invariant subspace of the pencil $(N,L)$.
+
+---
+
+### Step 3: Transform the Pencil into SSF
+
+Next, apply equivalence transformations to convert the pencil $(N,L)$ into the Standard Symplectic Form:
+
+$$
+\widehat{N} =
+\begin{bmatrix}
+\widehat{A} & 0 \\
+-\widehat{H} & I
+\end{bmatrix},
+\qquad
+\widehat{L} =
+\begin{bmatrix}
+I & \widehat{G} \\
+0 & \widehat{A}^T
+\end{bmatrix}.
+$$
+
+Equivalence transformations preserve the generalized eigenvalues of the pencil. After this step, the CARE problem has been transformed into a DARE-compatible structured pencil problem.
+
+---
+
+### Step 4: Full Algorithm
+
+Choose an appropriate parameter $\gamma > 0$ and define
+
+$$
+A_{\gamma} = A - \gamma I.
+$$
+
+Initialize
+
+$$
+\widehat{A}_{0} = I + 2\gamma(A_{\gamma} + G A_{\gamma}^{-T}H)^{-1},
+$$
+
+$$
+\widehat{G}_{0} = 2\gamma A_{\gamma}^{-1}G(A_{\gamma}^T + H A_{\gamma}^{-1}G)^{-1},
+$$
+
+$$
+\widehat{H}_{0} = 2\gamma(A_{\gamma}^T + H A_{\gamma}^{-1}G)^{-1}H A_{\gamma}^{-1}.
+$$
+
+For $k = 0,1,2,\ldots$, apply the recurrence
+
+$$
+\widehat{A}_{k+1} = \widehat{A}_{k}(I + \widehat{G}_{k}\widehat{H}_{k})^{-1}\widehat{A}_{k},
+$$
+
+$$
+\widehat{G}_{k+1} = \widehat{G}_{k} + \widehat{A}_{k}\widehat{G}_{k}(I + \widehat{H}_{k}\widehat{G}_{k})^{-1}\widehat{A}_{k}^{T},
+$$
+
+$$
+\widehat{H}_{k+1} = \widehat{H}_{k} + \widehat{A}_{k}^{T}(I + \widehat{H}_{k}\widehat{G}_{k})^{-1}\widehat{H}_{k}\widehat{A}_{k}.
+$$
+
+Stop the iteration when $\widehat{H}_{k}$ converges, i.e.,
+
+$$
+\|\widehat{H}_{k} - \widehat{H}_{k-1}\| \leq \varepsilon \|\widehat{H}_{k}\|.
+$$
+
+Under suitable spectral separation assumptions, the doubling iteration satisfies
+
+$$
+\widehat{A}_{k} \rightarrow 0,
+$$
+
+and
+
+$$
+\widehat{H}_{k} \rightarrow X_{*},
+$$
+
+where $X_{*}$ is the stabilizing solution of the CARE.
