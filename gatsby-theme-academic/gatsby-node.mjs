@@ -533,6 +533,11 @@ export const createSchemaCustomization = async (
       date: String
       title: String
     }
+    type SiteSiteMetadata {
+      social: [SiteSiteMetadataSocial]
+      interests: [SiteSiteMetadataInterests]
+      education: [SiteSiteMetadataEducation]
+    }
     type SiteSiteMetadataSocial @dontInfer {
       url: String
       icon: [String] @fontAwesomeIcon
