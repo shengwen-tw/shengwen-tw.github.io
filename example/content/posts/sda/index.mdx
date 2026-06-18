@@ -1,5 +1,5 @@
 ---
-title: "Structure-preserving Doubling Algorithm"
+title: "Structure-Preserving Doubling Algorithm"
 tags: ["notes"]
 date: 2026-06-18
 cover: "./sda_book.png"
@@ -446,23 +446,43 @@ Therefore, the continuous-time stable invariant subspace of $\mathcal{H}$ is con
 
 ### Step 3: Transform the Pencil into SSF
 
-Next, apply equivalence transformations to convert the pencil $(N,L)$ into the Standard Symplectic Form:
+The Cayley-transformed pencil $(N,L)$ is not yet in the Standard Symplectic Form used in the DARE case. To apply the same doubling recurrence, we apply equivalence transformations to rewrite it into an equivalent SSF pencil.
+
+That is, there exist invertible matrices $T_1$ and $T_2$ such that
 
 $$
-\widehat{N} =
+\tilde{N} = T_1NT_2 =
 \begin{bmatrix}
-\widehat{A} & 0 \\
--\widehat{H} & I
+\widehat{A}_0 & 0 \\
+-\widehat{H}_0 & I
 \end{bmatrix},
-\qquad
-\widehat{L} =
+$$
+
+and
+
+$$
+\tilde{L} = T_1LT_2 =
 \begin{bmatrix}
-I & \widehat{G} \\
-0 & \widehat{A}^T
+I & \widehat{G}_0 \\
+0 & \widehat{A}_0^T
 \end{bmatrix}.
 $$
 
-Equivalence transformations preserve the generalized eigenvalues of the pencil. After this step, the CARE problem has been transformed into a DARE-compatible structured pencil problem.
+Therefore, the transformed pencil is
+
+$$
+\tilde{N} - \mu \tilde{L}.
+$$
+
+Since $T_1$ and $T_2$ are invertible, this equivalence transformation preserves the generalized eigenvalues of the original pencil $(N,L)$. Hence, the SSF pencil has the same Cayley-transformed eigenvalues.
+
+After this step, the CARE problem has been transformed into a DARE-compatible structured pencil problem. The matrices
+
+$$
+(\widehat{A}_0,\widehat{G}_0,\widehat{H}_0)
+$$
+
+are obtained by carrying out the equivalence transformations explicitly. Their formulas are given in the next step.
 
 ---
 
@@ -474,7 +494,7 @@ $$
 A_{\gamma} = A - \gamma I.
 $$
 
-Initialize
+Initialize the SSF triple by applying the Cayley transform and equivalence transformations:
 
 $$
 \widehat{A}_{0} = I + 2\gamma(A_{\gamma} + G A_{\gamma}^{-T}H)^{-1},
@@ -488,7 +508,7 @@ $$
 \widehat{H}_{0} = 2\gamma(A_{\gamma}^T + H A_{\gamma}^{-1}G)^{-1}H A_{\gamma}^{-1}.
 $$
 
-For $k = 0,1,2,\ldots$, apply the recurrence
+For $k = 0,1,2,\ldots$, apply the same doubling recurrence as in the DARE case:
 
 $$
 \widehat{A}_{k+1} = \widehat{A}_{k}(I + \widehat{G}_{k}\widehat{H}_{k})^{-1}\widehat{A}_{k},
