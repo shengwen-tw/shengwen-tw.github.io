@@ -208,6 +208,7 @@ export const createPages = async ({
 
     const data = {};
     data.title = frontmatter.title || '';
+    data.label = frontmatter.label || '';
     data.tags = frontmatter.tags || [];
     data.date = frontmatter.date || '';
     data.path = frontmatter.path;
@@ -498,6 +499,7 @@ export const createSchemaCustomization = async (
     }
     type MdxFieldsSlug {
       title: String
+      label: String
       tags: [String]
       date: String
       path: String
@@ -559,6 +561,10 @@ export const createSchemaCustomization = async (
       title: {
         type: 'String',
         resolve: (source) => source.title || '',
+      },
+      label: {
+        type: 'String',
+        resolve: (source) => source.label || '',
       },
       tags: {
         type: '[String]',

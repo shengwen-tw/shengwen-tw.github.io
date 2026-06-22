@@ -2,16 +2,53 @@ import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import {
-  Row, Col, Grid, FlexboxGrid,
+  Col, FlexboxGrid,
 } from 'rsuite';
 
-import CodeBox from '../CodeBox';
 import PostCard from '../PostCard';
 import ResearchCard from '../ResearchCard';
 import Tag from '../Tag';
 // import PostTag from '../PostTag';
 // import Utils from '../../utils/pageUtils';
 // import Statistics from '../../../content/statistics.json';
+
+const POST_LABEL_ORDER = ['events', 'note'];
+const POST_LABEL_TITLES = {
+  events: 'Events',
+  note: 'Notes',
+};
+const POST_LABEL_ALIASES = {
+  conference: 'events',
+  event: 'events',
+  notes: 'note',
+};
+
+const getPostTags = (post) => _.get(post, 'node.fields.slug.tags', []);
+
+const normalizePostLabel = (label) => {
+  const normalizedLabel = _.kebabCase(label);
+  return POST_LABEL_ALIASES[normalizedLabel] || normalizedLabel;
+};
+
+const getPostLabel = (post) => {
+  const label = _.get(post, 'node.fields.slug.label');
+  if (label) return normalizePostLabel(label);
+
+  const tags = getPostTags(post);
+  const normalizedTags = tags.map(normalizePostLabel);
+  return (
+    normalizedTags.find((tag) => POST_LABEL_ORDER.includes(tag)) ||
+    normalizedTags[0] ||
+    'other'
+  );
+};
+
+const getPostLabelTitle = (label) => POST_LABEL_TITLES[label] || _.startCase(label);
+
+const matchesSelectedTags = (post, selectedTags) => {
+  const tags = new Set(getPostTags(post));
+  return Array.from(selectedTags).every((tag) => tags.has(tag));
+};
 
 const Panel = (props) => {
   const { type, data } = props;
@@ -31,7 +68,6 @@ const Panel = (props) => {
     } else {
       nextSelectedTags.add(tagName);
     }
-    console.log('You are interested in: ', nextSelectedTags);
     setSelectedTags(nextSelectedTags);
   };
 
@@ -50,45 +86,50 @@ const Panel = (props) => {
     );
   };
 
-  if (data.allMdx) {
-    data.allMdx.edges.forEach((val) => {
-      console.log(val.node);
-      if (!val.node || !val.node.frontmatter || !val.node.frontmatter.tags) {
-        // eslint-disable-next-line no-param-reassign
-        val.tags = new Set();
-      } else {
-        // eslint-disable-next-line no-param-reassign
-        val.tags = new Set(val.node.frontmatter.tags);
-      }
-    });
+  const docs = data.allMdx ? data.allMdx.edges : [];
+  const filteredDocs = docs.filter((val) => matchesSelectedTags(val, selectedTags));
+
+  if (isResearch) {
+    return (
+      <FlexboxGrid className="spacing-grid">
+        {
+          filteredDocs.map((val, key) => (
+            // eslint-disable-next-line react/no-array-index-key
+            <FlexboxGrid.Item as={Col} key={key} xs={24} sm={24} md={24} lg={24}>
+              <ResearchCard data={val} tagsMap={tagsMap} />
+            </FlexboxGrid.Item>
+          ))
+        }
+      </FlexboxGrid>
+    );
   }
+
+  const groupedPosts = _.groupBy(filteredDocs, getPostLabel);
+  const orderedLabels = _.uniq([
+    ...POST_LABEL_ORDER.filter((label) => groupedPosts[label]),
+    ...Object.keys(groupedPosts).filter((label) => !POST_LABEL_ORDER.includes(label)),
+  ]);
 
   return (
     <>
-      <FlexboxGrid className="spacing-grid">
-        {
-          data.allMdx && data.allMdx.edges.map((val, key) => {
-            // eslint-disable-next-line no-restricted-syntax
-            for (const tag of selectedTags) {
-              if (!val.tags.has(tag)) return null;
-            }
-            if (isResearch) {
-              return (
+      {orderedLabels.map((label, labelIndex) => (
+        <section
+          key={label}
+          style={{ marginTop: labelIndex === 0 ? 0 : '2rem' }}
+        >
+          <h2 style={{ marginBottom: '1rem' }}>{getPostLabelTitle(label)}</h2>
+          <FlexboxGrid className="spacing-grid">
+            {
+              groupedPosts[label].map((val, key) => (
                 // eslint-disable-next-line react/no-array-index-key
-                <FlexboxGrid.Item as={Col} key={key} xs={24} sm={24} md={24} lg={24}>
-                  <ResearchCard data={val} tagsMap={tagsMap} />
+                <FlexboxGrid.Item as={Col} key={key} xs={24} sm={24} md={24} lg={8}>
+                  <PostCard data={val} tagsMap={tagsMap} />
                 </FlexboxGrid.Item>
-              );
+              ))
             }
-            return (
-            // eslint-disable-next-line react/no-array-index-key
-              <FlexboxGrid.Item as={Col} key={key} xs={24} sm={24} md={24} lg={8}>
-                <PostCard data={val} tagsMap={tagsMap} />
-              </FlexboxGrid.Item>
-            );
-          })
-        }
-      </FlexboxGrid>
+          </FlexboxGrid>
+        </section>
+      ))}
     </>
   );
 };
