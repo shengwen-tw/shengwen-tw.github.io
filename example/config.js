@@ -90,13 +90,13 @@ module.exports = {
   interests: [
     {
       icon: ['fas', 'fa-code'],
-      title: 'Robotics, Control, and Estimation',
+      title: 'Robotics, Control & Estimation',
     }, {
       icon: 'layer-group',
-      title: 'Autonomous Systems and Machine Learning',
+      title: 'Autonomous Systems',
     }, {
       icon: ['fas', 'fa-microchip'],
-      title: 'Embedded/Real-time Systems',
+      title: 'Embedded and Real-Time Systems',
     }, {
       icon: ['fab', 'linux'],
       title: 'Open Source Software',
