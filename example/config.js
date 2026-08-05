@@ -103,7 +103,7 @@ module.exports = {
     }],
     talks: [
         {
-          title: 'Featured Presentations',
+          title: 'International Conference Talks',
           data: [
             {
   	      title: 'OSSNA 2026: Demystifying VirtIO-GPU: Building a Graphics Virtualization Bridge from Scratch [[Video]](https://www.youtube.com/watch?v=BDDEyVUcTLw) [[Slides]](https://drive.google.com/file/d/10wy7cwmIsmio1vyK8wGzJcXoRXqTLwY5/view?usp=sharing)',
@@ -116,10 +116,23 @@ module.exports = {
             }
           ],
         }, {
-        title: 'Community Conferences',
+          title: 'Keynotes & Invited Talks',
+          data: [
+            {
+              title: 'MOPCON 2024 Keynote: Trends in Machine Learning for Unmanned Aerial Vehicle Applications [[Slides]](https://drive.google.com/file/d/1UmSeU8Y63s4cASBFNWM_zi5ll2J9EIJx/view?usp=sharing)',
+              location: 'Kaohsiung, Taiwan',
+              date: 'Oct 26 2024',
+            }, {
+              title: 'PEGATRON Corporation: Trends and Lessons Learned in Deep Learning and Generative AI Applications for UAV',
+    	      location: 'Taipei, Taiwan',
+  	      date: 'Dec 19 2024',
+            }
+          ],
+        }, {
+        title: 'Community Talks',
         data: [
           {
-  	      title: 'COSCUP 2026: The Illusion of Hardware: How Modern Virtual Machines Work',
+  	      title: 'COSCUP 2026: The Illusion of Hardware: How Modern Virtual Machines Work [[Slides]](https://drive.google.com/file/d/1OwC0eo8sWeRmDrPONtk9EZb1jCm9hCAa/view?usp=sharing)',
   	      location: 'Taipei, Taiwan',
 	      date: 'Aug 2026',
           },          {
@@ -131,10 +144,6 @@ module.exports = {
   	      location: 'AWS Office in Hong Kong',
 	      date: 'Sep 13 2025',
           }, {
-              title: 'MOPCON 2024 Keynote: Trends in Machine Learning for Unmanned Aerial Vehicle Applications [[Slides]](https://drive.google.com/file/d/1UmSeU8Y63s4cASBFNWM_zi5ll2J9EIJx/view?usp=sharing)',
-              location: 'Kaohsiung, Taiwan',
-              date: 'Oct 26 2024',
-          }, {
               title: 'COSCUP 2024: Creating a Linux-like Real-Time Operating System for Quadrotor Drones [[Video]](https://www.youtube.com/watch?v=Ft4jBW732nU) [[Slides]](https://drive.google.com/file/d/16S8ZRC-lhT15CXwWIy-RIIWXl5Ertqo5/view)',
     	      location: 'Taipei, Taiwan',
 	      date: 'Aug 3 2024',
@@ -143,15 +152,6 @@ module.exports = {
 	      location: 'Taipei, Taiwan',
 	      date: 'Jul 29 2023',
           },
-        ],
-      }, {
-        title: 'Invited Talks',
-          data: [
-          {
-            title: 'PEGATRON Corporation: Trends and Lessons Learned in Deep Learning and Generative AI Applications for UAV',
-  	    location: 'Taipei, Taiwan',
-	    date: 'Dec 19 2024',
-          }
         ],
       },
     ],
