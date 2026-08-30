@@ -67,7 +67,7 @@ module.exports = {
   googleAnalyticTrackingId: process.env.GA_TRACKING_ID || 'G-ZK3P43DY6M',
   education: [
     {
-      date: 'Aug 2025 - Dec 2026',
+      date: 'Aug 2025 - May 2027',
       icon: 'university',
       title: 'M.S. in Computer Science',
       location: 'The University of Texas at Austin, USA',
@@ -89,11 +89,11 @@ module.exports = {
     }],
   interests: [
     {
-      icon: ['fas', 'fa-code'],
-      title: 'Robotics, Control & Estimation',
-    }, {
       icon: 'layer-group',
-      title: 'Autonomous Systems',
+      title: 'Robotics and Autonomous Systems',
+    }, {
+      icon: ['fas', 'project-diagram'],
+      title: 'Control and Decision Making',
     }, {
       icon: ['fas', 'fa-microchip'],
       title: 'Embedded and Real-Time Systems',
