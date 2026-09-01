@@ -136,7 +136,7 @@ module.exports = {
   	      location: 'Taipei, Taiwan',
 	      date: 'Aug 2026',
           },          {
-  	      title: 'Sciwork Seminar 2026: From Optimal Control to Reinforcement Learning for Quadrotor Drones',
+  	      title: 'Sciwork Seminar 2026: From Optimal Control to Reinforcement Learning for Quadrotor Drones [[Slides]](https://drive.google.com/file/d/1Y3XgF9OthbjNDhyO93OfG7P_fOf9K6aa/view?usp=sharing)',
   	      location: 'Hsinchu, Taiwan',
 	      date: 'June 13 2026',
           }, {
