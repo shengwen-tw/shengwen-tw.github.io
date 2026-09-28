@@ -25,8 +25,8 @@ export default () => {
         ]}
       />
       <AboutMe />
-      <Experience />
       <Awards />
+      <Experience />
       <SelectedResearch />
     </>
   );

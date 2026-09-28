@@ -4,8 +4,13 @@ import { Timeline, TimelineEvent } from 'react-event-timeline';
 
 import { useSiteMetadata } from '../../../utils/hooks';
 import Icon from '../../Icon';
+import IconListItem from '../../IconListItem';
 
 import * as styles from './homePage.module.less';
+
+const generateInterest = (data) => (
+  <IconListItem icon={data.icon} size="lg" title={data.title} />
+);
 
 const splitTitleAndCompany = (title = '') => {
   const parts = title.split(' at ');
@@ -67,6 +72,12 @@ const Awards = () => {
               {lastTimeLineData.map(AwardItem)}
             </Timeline>
           ) : null}
+        </Col>
+        <Col xs={24} sm={24} md={12} lg={9}>
+          <h2 style={{ marginBottom: '0.8rem' }} className="interests">Interests</h2>
+          <div>
+            {siteMetadata.interests.map(generateInterest)}
+          </div>
         </Col>
       </Row>
     </div>

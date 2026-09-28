@@ -1,18 +1,11 @@
 import React from 'react';
 import { Timeline } from 'react-event-timeline';
-import {
-  Row, Col, List, FlexboxGrid,
-} from 'rsuite';
+import { Row, Col } from 'rsuite';
 
 import { useSiteMetadata } from '../../../utils/hooks';
-import IconListItem from '../../IconListItem';
 import TimelineItem from '../../TimelineItem';
 
 import * as styles from './homePage.module.less';
-
-const generateInterest = (data) => (
-  <IconListItem icon={data.icon} size="lg" title={data.title} />
-);
 
 const Experience = () => {
   const siteMetadata = useSiteMetadata();
@@ -43,16 +36,7 @@ const Experience = () => {
               </Timeline>
             ) : null}
         </Col>
-        <Col xs={24} sm={24} md={12} lg={9}>
-          <h2 style={{ marginBottom: '0.8rem' }} className="interests">Interests</h2>
-          {/* <List itemLayout="horizontal" split={false}> */}
-          <div>
-            {siteMetadata.interests.map(generateInterest)}
-          </div>
-          {/* </List> */}
-        </Col>
       </Row>
-
     </div>
   );
 };
