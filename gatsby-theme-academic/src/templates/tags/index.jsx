@@ -142,7 +142,7 @@ export const pageQuery = graphql`
           contentFilePath: { regex: "/index.mdx?$/" }
         }
       }
-      sort: {frontmatter: {date: DESC}}
+      sort: {fields: {slug: {date: DESC}}}
     ) {
       edges {
         node {

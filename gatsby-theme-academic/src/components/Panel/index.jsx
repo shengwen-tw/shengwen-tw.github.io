@@ -12,14 +12,16 @@ import Tag from '../Tag';
 // import Utils from '../../utils/pageUtils';
 // import Statistics from '../../../content/statistics.json';
 
-const POST_LABEL_ORDER = ['events', 'note'];
+const POST_LABEL_ORDER = ['travel', 'note'];
 const POST_LABEL_TITLES = {
-  events: 'Events',
+  travel: 'Travel',
   note: 'Notes',
 };
 const POST_LABEL_ALIASES = {
-  conference: 'events',
-  event: 'events',
+  conference: 'travel',
+  event: 'travel',
+  events: 'travel',
+  trip: 'travel',
   notes: 'note',
 };
 
