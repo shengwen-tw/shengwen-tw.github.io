@@ -119,6 +119,10 @@ module.exports = {
           title: 'Keynotes & Invited Talks',
           data: [
             {
+              title: 'MOPCON 2026: Learning to Fly in Simulation: Quadrotor Reinforcement Learning from First Principles',
+              location: 'Kaohsiung, Taiwan',
+              date: 'Oct 31 2026',
+            }, {
               title: 'MOPCON 2024 Keynote: Trends in Machine Learning for Unmanned Aerial Vehicle Applications [[Slides]](https://drive.google.com/file/d/1UmSeU8Y63s4cASBFNWM_zi5ll2J9EIJx/view?usp=sharing)',
               location: 'Kaohsiung, Taiwan',
               date: 'Oct 26 2024',
