@@ -72,7 +72,7 @@ module.exports = {
       title: 'M.S. in Computer Science',
       location: 'The University of Texas at Austin, USA',
     }, {
-      date: 'Sep 2022 - Mar 2024',
+      date: 'Sep 2022 - May 2024',
       icon: 'university',
       title: 'Ph.D. Student, Electrical Engineering',
       location: 'National Taiwan University, Taiwan',
