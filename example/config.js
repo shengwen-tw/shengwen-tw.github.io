@@ -164,7 +164,7 @@ module.exports = {
       title: 'Journal Papers',
       data: [
         {
-	  title: 'S.-W. Cheng et al., “RotorBench: A Unified SE(3) Benchmark for Quadrotor Controllers under Disturbance and Model Uncertainty,” manuscript in preparation.',
+	  title: 'S.-W. Cheng, T.-H. Cheng, and C.-C. Huang, “RotorBench: A Unified SE(3) Benchmark for Quadrotor Controllers under Disturbance and Model Uncertainty,” manuscript in preparation.',
 	  location: '',
 	  date: '',
         },
