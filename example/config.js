@@ -136,6 +136,10 @@ module.exports = {
         title: 'Community Talks',
         data: [
           {
+  	      title: 'sciwork conference 2026: On the Tenth Anniversary of AlphaGo - An Introduction to Reinforcement Learning and Planning',
+  	      location: 'Taipei, Taiwan',
+	      date: 'Dec 5 2026',
+          }, {
   	      title: 'COSCUP 2026: The Illusion of Hardware: How Modern Virtual Machines Work [[Slides]](https://drive.google.com/file/d/1OwC0eo8sWeRmDrPONtk9EZb1jCm9hCAa/view?usp=sharing)',
   	      location: 'Taipei, Taiwan',
 	      date: 'Aug 2026',
