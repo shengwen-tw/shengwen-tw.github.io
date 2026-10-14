@@ -136,7 +136,7 @@ module.exports = {
         title: 'Community Talks',
         data: [
           {
-  	      title: 'sciwork conference 2026: On the Tenth Anniversary of AlphaGo - An Introduction to Reinforcement Learning and Planning',
+  	      title: 'Sciwork Conference 2026: On the Tenth Anniversary of AlphaGo - An Introduction to Reinforcement Learning and Planning',
   	      location: 'Taipei, Taiwan',
 	      date: 'Dec 5 2026',
           }, {
