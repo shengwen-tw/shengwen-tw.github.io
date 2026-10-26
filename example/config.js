@@ -119,7 +119,7 @@ module.exports = {
           title: 'Keynotes & Invited Talks',
           data: [
             {
-              title: 'MOPCON 2026: Learning to Fly in Simulation: Quadrotor Reinforcement Learning from First Principles',
+              title: 'MOPCON 2026: Learning to Fly in Simulation: Quadrotor Reinforcement Learning from First Principles [[Slides]](https://drive.google.com/file/d/1c_4MA8ceyZF0MGvRW2RbgGcnUMv3Eu-h/view?usp=drive_link)',
               location: 'Kaohsiung, Taiwan',
               date: 'Oct 31 2026',
             }, {
