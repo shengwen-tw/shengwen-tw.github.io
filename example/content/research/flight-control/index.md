@@ -26,6 +26,10 @@ This work highlights a robust system integration approach for environment-adapti
 
 <iframe src="https://www.youtube.com/embed/hBBe1Kj82B4" title="Presentation Video for Masters Thesis Defense" width="100%" height="500px" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+<iframe src="https://www.youtube.com/embed/czGurX69PbI" title="Flight control demo" width="100%" height="500px" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<iframe src="https://www.youtube.com/embed/mGtfnD4lRjU" title="Flight control demo 2" width="100%" height="500px" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Gallery
 
 ### Control System Diagram

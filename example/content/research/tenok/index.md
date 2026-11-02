@@ -19,6 +19,8 @@ layer (HAL).
 
 <iframe src="https://www.youtube.com/embed/byWihWcMP00" title="tenok: an experimental real-time operating system" width="100%" height="500px" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+<iframe src="https://www.youtube.com/embed/NC5YZDt0NiE" title="tenok demo" width="100%" height="500px" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Presentations
 
 ### COSCUP 2024

@@ -25,3 +25,15 @@ My contributions include the virtualization of several hardware components:
 * **VirtIO Entropy:** Emulates a random number generator (RNG), supplying entropy required by many software components to operate correctly (e.g., system libraries, cryptographic routines, networking tools)
 
 <iframe src="https://www.youtube.com/embed/iPnLBjABbGs" width="100%" height="500px" title="semu: VirtIO GPU demonstration" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## Talk at Open Source Summit North America 2026
+
+Slides of our talk, ["Demystifying VirtIO-GPU: Building a Graphics Virtualization Bridge From Scratch"](https://shengwen-tw.github.io/posts/ossna2026/), at Open Source Summit North America 2026:
+
+<iframe src="https://drive.google.com/file/d/10wy7cwmIsmio1vyK8wGzJcXoRXqTLwY5/preview" width="100%" height="500px"></iframe>
+
+## Talk at COSCUP 2026
+
+Slides of my talk, "The Illusion of Hardware: How Modern Virtual Machines Work", at COSCUP 2026:
+
+<iframe src="https://drive.google.com/file/d/1OwC0eo8sWeRmDrPONtk9EZb1jCm9hCAa/preview" width="100%" height="500px"></iframe>
