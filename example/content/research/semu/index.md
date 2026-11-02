@@ -26,6 +26,10 @@ My contributions include the virtualization of several hardware components:
 
 <iframe src="https://www.youtube.com/embed/iPnLBjABbGs" width="100%" height="500px" title="semu: VirtIO GPU demonstration" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+VirtIO GPU with 3D acceleration through [VirGL](https://docs.mesa3d.org/drivers/virgl.html):
+
+<iframe src="https://www.youtube.com/embed/HDUBEKMfbkw" width="100%" height="500px" title="semu: VirtIO GPU with VirGL acceleration" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Talk at Open Source Summit North America 2026
 
 Slides of our talk, ["Demystifying VirtIO-GPU: Building a Graphics Virtualization Bridge From Scratch"](https://shengwen-tw.github.io/posts/ossna2026/), at Open Source Summit North America 2026:
